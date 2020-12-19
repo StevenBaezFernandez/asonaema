@@ -1,0 +1,1 @@
+Plantilla de diseño responsive
