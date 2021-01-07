@@ -598,3 +598,7 @@ body a{
       width: 98%;
       margin: auto;
   }
+
+  .container_carousel{
+      margin-bottom: 100px;
+  }
