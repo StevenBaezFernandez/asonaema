@@ -33,6 +33,14 @@ body a{
     align-items: center;
     justify-content: space-between;
     padding: 0px 20px;
+    position: relative;
+}
+.fa-sort-down{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #333333;
+    font-size: 50px;
 }
 .header-father .header1 .left{
     display: flex;
@@ -40,6 +48,7 @@ body a{
 .header-father .header1 .left i{
     margin-right: 10px;
     font-size: 20px;
+    position: relative;
 }
 .header-father .header1 .btn-menu{
     display: none;
@@ -47,19 +56,45 @@ body a{
 .header-father .header1 h1{
     font-weight: normal;
     font-size: 14px;
-    /* margin-left: 20px; */
+    margin: 0;
 }
 .header1 .menu_social{
-    /* margin-right: 30px; */
     display: flex;
     align-items: center;
 }
 .header1 .menu_social a{
     color: #fff;
+    position: relative;
 }
-.header1 .menu_social i:hover{
+.header1 .menu_social > i:hover{
     color: #0c8044;
     transition: all .3s ease;
+    
+}
+.header1 .menu_social i::after{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: -240%;
+    left: -25px;
+    width: 70px;
+    padding: 8px 10px;
+    font-size: 11px;
+    border-radius: 3px;
+    text-align: center;
+    background: rgba(0,0,0,.6);
+    font-family: 'Roboto';
+    visibility: hidden;
+    animation: all ease .3s;
+}
+.header1 .menu_social i.fa-facebook-f::after{
+    content: "facebook";
+}
+.header1 .menu_social i.fa-instagram::after{
+    content: "instagram";
+}
+.header1 .menu_social i.fa-facebook-f:hover::after{
+    visibility: visible;
 }
 .header1 .menu_social .social{
     padding: 10px 20px;
@@ -143,6 +178,7 @@ body a{
 .menu{
     list-style: none;
     float: right;
+    margin: 0;
 }
 .menu_movil{
     display: none;
@@ -151,7 +187,6 @@ body a{
     display: inline-block;
     margin: 0px 10px;
     position: relative;
-    padding-bottom: 10px;
 }
 .menu.foot > li{
     padding: 0px;
@@ -159,7 +194,7 @@ body a{
 .menu li a{
     display: block;
     font-size: 16px;
-    color: #777777;
+    color: #555555;
     text-decoration: none;
 }
 .menu li a:hover{
@@ -169,7 +204,8 @@ body a{
     font-weight: bold;
     color: #00ac53;
 }
-.btn-main{
+.btn-main,
+.column_info_button{
     height: 60px;
     font-size: 16px;
     font-weight: bold;
@@ -181,9 +217,18 @@ body a{
     outline: none;
     transition: all .3s ease;
     color: #555555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
-.btn-main:hover{
+.btn-main > i{
+    padding-right: 10px;
+    padding-left: -40px;
+    font-size: 22px;
+}
+.btn-main:hover,
+.column_info_button{
     background: #0c8044;
     color: #ffffff;
     border: .5px solid #0c8044;
@@ -280,7 +325,6 @@ body a{
 }
 .panel_busqueda .resultado_busqueda .alerta_no_funciona{
     color: #fff;
-    /* text-shadow: 1px 3px 5px rgba(0,0,0,0.3); */
     background: #555555;
     padding: 20px;
     box-shadow: 2px 4px 6px #000000;
@@ -439,7 +483,6 @@ body a{
     background: #0c8044;
     color: #fff;
     transform: translateX(60px);
-    /* visibility: hidden; */
     transition: all .4s ease;
 }
 .btn_ir_arriba.active{
@@ -599,6 +642,91 @@ body a{
       margin: auto;
   }
 
-  .container_carousel{
-      margin-bottom: 100px;
+  /* -----------carousel -------------*/
+
+  .carousel-caption{
+      margin: 0;
+      top: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+  .carousel-caption h5{
+      font-size: 4em;
+      text-shadow: 1px 3px 3px rgba(0,0,0,.6);
+  }
+  .carousel-caption p{
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+  }
+
+  /* -----------column_info -------------*/
+
+.column_info_container{
+    display: flex;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 90px 20px 90px 20px;
+    background: #FAFAFA;
+    position: relative;
+    background: none;
+
+}
+
+/* ---- particles.js container ---- */ 
+
+#particles-js{ 
+    position:absolute; 
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: #fafafa;
+    z-index: -1;
+} 
+  .column_info{
+      width: 33.3%;
+      padding: 30px;
+      margin: 20px;
+      background: #fff;
+      box-shadow: 1px 1px 10px rgba(0,0,0,.1);
+  }
+  .column_info_imgtop{
+      width: 75px;
+      display: block;
+      margin: 10px auto;
+      margin-bottom: 30px;
+  } 
+  .column_info_title{
+      margin-bottom: 30px;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 300;
+      color: #1C1C1C;
+  }
+  .column_info_text{
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 100;
+      color: black;
+      margin-bottom: 30px;
+  }
+  .column_info_button{
+    padding: 10px 20px;
+    font-weight: 100;
+    height: 48px;
+    outline: none;
+
+  }
+  .column_info_button:hover{
+    box-shadow: 1px 4px 5px rgba(0,0,0,.8);
+    background: #000;
+    border-color: black;
+
+  }
+  .column_info_button > i{
+      font-size: 24px;
+      padding: 0px 0px 0px 5px;
+      transition: all ease .4s;
+  }
+  .column_info_button:hover > i{
+      transform: translateX(6px);
   }

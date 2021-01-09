@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,600,700|Montserrat:400,700,900|Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -33,6 +34,8 @@
                     <i class="fa fa-search"></i>
                 </div>
             </div>
+
+            <i class="fas fa-sort-down"></i>
             
         </div>
         <div class="header2">
@@ -41,7 +44,7 @@
             </a>
             
             <ul class="menu principal">
-                <li><a href="/asonaema" class="activo enlace_inicio">INICIO</a></li>
+                <li><a href="/asonaema" class="activo enlace_inicio">INICIO <i class="fas fa-home"></i></a></li>
                 <li class=" activo enlace_produsctos"><a href="tienda">PRODUCTOS</a></li>
                 <li class="enlace_sobre_nosotros"><a href="nosotros" >SOBRE NOSOTROS</a></li>
                 <li class="enlace_galeria"><a href="galeria">GALERIA</a></li>
@@ -54,7 +57,7 @@
                     </ul>
                 </li>
             </ul>
-            <a href="contacto"><button role="button" class="btn-main">CONTACTO</button></a>
+            <a href="contacto"><button role="button" class="btn-main"><i class="fas fa-envelope"></i> CONTACTO</button></a>
             
         </div>
     </header>
@@ -109,49 +112,49 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="img/img1.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption ">
                   <h5>First slide label</h5>
                   <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="img/img2.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption ">
                   <h5>Second slide label</h5>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="img/img3.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption ">
                   <h5>Third slide label</h5>
                   <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="img/img4.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption ">
                   <h5>Third slide label</h5>
                   <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="img/img5.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption ">
                   <h5>Third slide label</h5>
                   <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="img/img6.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption ">
                   <h5>Third slide label</h5>
                   <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="img/img7.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption ">
                   <h5>Third slide label</h5>
                   <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                 </div>
@@ -166,6 +169,42 @@
               <span class="visually-hidden">Next</span>
             </a>
           </div>
+    </div>
+
+
+
+    <div class="column_info_container">
+        <!-- particles.js container --> 
+        <div id="particles-js"></div> 
+
+        <div class="column_info">
+            <img src="img/emprendedor.svg" class="column_info_imgtop" alt="">
+            <h2 class="column_info_title">¿Que es un emprendedor?</h2>
+            <p class="column_info_text">
+                Un emprendedor es una persona que tiene la capacidad de descubrir e identificar algún tipo de oportunidad 
+                de negocios. Así, en base a ello, organiza una serie de recursos con el fin de darle inicio a un proyecto empresarial.
+            </p>
+            <button class="column_info_button">Más Información <i class="fas fa-arrow-right"></i></button>
+        </div>
+        <div class="column_info">
+            <img src="img/caracteristicas_emprendedor.svg" class="column_info_imgtop" alt="">
+            <h2 class="column_info_title">Característica de un emprendedor</h2>
+            <p class="column_info_text">
+                Emprender exige mucho esfuerzo y trabajo, incertidumbre, miedos al cambio, ambición y vivir fuera de la zona 
+                de confort, más si invertimos dinero y tiempo en nuestro negocio del que queremos vivir. Quien te diga que es 
+                fácil no te dice toda la verdad.
+            </p>
+            <button class="column_info_button">Más Información <i class="fas fa-arrow-right"></i></button>
+        </div>
+        <div class="column_info">
+            <img src="img/retos_emprendedor.svg" class="column_info_imgtop" alt="">
+            <h2 class="column_info_title">Retos que debe superar un emprendedor</h2>
+            <p class="column_info_text">
+                Conseguir la libertad financiera con una idea de negocio es un asunto que pone de cabeza a más de un emprendedor; 
+                hay muchas vertientes a las que hay que prestar atención para conseguir el éxito.
+            </p>
+            <button class="column_info_button">Más Información <i class="fas fa-arrow-right"></i></button>
+        </div>
     </div>
 
 
@@ -284,6 +323,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/particles.config.js"></script>
     <script src="js/main.js"></script>
     
 </body>
