@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: 'Roboto';
 }
+button:focus{
+    outline: none;
+}
 html {
     scroll-behavior: smooth;
   }
@@ -26,7 +29,7 @@ body a{
     width: 100%;
 }
 .header-father .header1{
-    background: #333333;
+    background: #373737;
     height: 52px;
     color: #ffffff;
     display: flex;
@@ -106,9 +109,10 @@ body a{
     margin: 0px 7px;
     cursor: pointer;
 }
-.header1 .menu_social .search_btn i{
+.header1 .menu_social .search_btn img{
     cursor: pointer;
-    font-size: 20px;
+    width: 22px;
+    fill: #eeeeee !important;
 }
 .header-father .header2,
 .menu_scroll{
@@ -196,6 +200,9 @@ body a{
     font-size: 16px;
     color: #555555;
     text-decoration: none;
+}
+.img_home_icon{
+    width: 20px;
 }
 .menu li a:hover{
     color: #00ac53;
@@ -291,8 +298,7 @@ body a{
 }
 .panel_busqueda .cuadro_busqueda .cerrar_busqueda{
     position: absolute;
-    font-size: 26px;
-    color: #eeeeee;
+    width: 22px;
     line-height: 20px;
     top: calc(50% - 10px);
     right: 30px;
@@ -348,14 +354,14 @@ body a{
     padding: 20px;
 }
 .pie_pagina .cuerpo > div:nth-child(2){
-    padding: 20px;
+    padding: 0px;
     text-align: center;
 }
 .pie_pagina .cuerpo > div:nth-child(2) ul{
     list-style: none;
 }
 .pie_pagina .cuerpo > div:nth-child(2) ul li{
-    margin: 10px;
+    margin: 6px;
 }
 .pie_pagina .cuerpo > div:nth-child(2) ul li a{
     color: #eaeaea;
@@ -372,6 +378,16 @@ body a{
 .pie_pagina .cuerpo .newsletter p{
     margin-bottom: 15px;
     margin-top: 5px;
+    max-width: 40%;
+    text-align: center;
+    margin: auto;
+}
+.pie_pagina .cuerpo .newsletter h2{
+    font-family: 'Noto Sans JP', sans-serif;
+    margin-bottom: 30px;
+}
+.pie_pagina .cuerpo .newsletter p{
+    margin-bottom: 20px;
 }
 
 .pie_pagina .cuerpo .news .input_group{
@@ -397,6 +413,8 @@ body a{
     border: 1px solid #0c8044;
     padding: 20px 30px;
     box-shadow: 1px 3px 5px rgba(0,0,0,.08);
+    margin-top: 20px;
+    border-radius: 3px;
 }
 .pie_pagina .cuerpo .newsletter button:hover{
     background: #08723b;
@@ -414,7 +432,7 @@ body a{
     color: #cccccc;
 }
 .pie_pagina .pie{
-    margin-top: 30px;
+    margin-top: 20px;
     background: #2f2f2f;
     overflow: hidden;
     height: 60px;
@@ -650,6 +668,21 @@ body a{
       display: flex;
       flex-direction: column;
       justify-content: center;
+      opacity: 0;
+  }
+  .carousel-caption{
+    animation: carousel_caption_animation 1s ease-out .8s forwards;
+
+  }
+  @keyframes carousel_caption_animation{
+      0%{
+        opacity: .3;
+        transform: translateY(-50px);
+      }
+      100%{
+        opacity: 1;
+        transform: translateY(0px);
+      }
   }
   .carousel-caption h5{
       font-size: 4em;
@@ -683,13 +716,53 @@ body a{
     background: #fafafa;
     z-index: -1;
 } 
-  .column_info{
-      width: 33.3%;
-      padding: 30px;
-      margin: 20px;
-      background: #fff;
-      box-shadow: 1px 1px 10px rgba(0,0,0,.1);
-  }
+.column_info{
+    width: 33.3%;
+    padding: 30px;
+    margin: 20px;
+    background: #fff;
+    box-shadow: 1px 1px 10px rgba(0,0,0,.1);
+    opacity: 0;
+}
+.column_info_container.active > .column_info:nth-child(2){
+    animation: animation_column_info_1 1s ease-out .2s forwards;
+}
+.column_info_container.active > .column_info:nth-child(3){
+    animation: animation_column_info_2 1s ease-out .4s forwards;
+}
+.column_info_container.active > .column_info:nth-child(4){
+    animation: animation_column_info_3 1s ease-out .2s forwards;
+}
+  @keyframes animation_column_info_1{
+    0%{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes animation_column_info_2{
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes animation_column_info_3{
+    0%{
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
   .column_info_imgtop{
       width: 75px;
       display: block;
@@ -747,6 +820,33 @@ body a{
       background-repeat: no-repeat;
       background-position-y: -99px;
   }
+  .grid_info.active .grid_img > img{
+      animation: grid_img_animation_1 1s ease-out .2s forwards;
+  }
+  .grid_info.active .grid_text{
+    animation: grid_text_animation_1 .8s ease-out .5s forwards;
+  }
+  @keyframes grid_text_animation_1{
+      0%{
+        opacity: 0;
+      }
+      100%{
+        opacity: 1;
+      }
+  }
+  @keyframes grid_img_animation_1{
+      0%{
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      100%{
+        opacity: 1;
+        transform: translateX(0px);
+      }
+  }
+  .grid_info.active .grid_text{
+      opacity: 0;
+  }
   .grid_info .right,
   .grid_info .left{
     width: 50%;
@@ -755,6 +855,7 @@ body a{
   }
   .grid_info .grid_img > img{
       width: 100%;
+      opacity: 0;
   }
   .grid_text_title{
     font-family: 'Noto Sans JP', sans-serif;
@@ -781,6 +882,20 @@ body a{
       background-repeat: no-repeat;
       position: relative;
   }
+  .paralax.active .title_paralax,
+  .paralax.active .text_paralax{
+    animation: paralax_title_animation 1s ease-out .3s forwards;
+  }
+  @keyframes paralax_title_animation{
+      0%{
+        opacity: 0;
+        transform: scale(.5);
+      }
+      100%{
+        opacity: 1;
+        transform: scale(1);
+      }
+  }
   .cover_paralax{
       position: absolute;
       top: 0px;
@@ -799,6 +914,7 @@ body a{
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 3.5em;
     margin-bottom: 30px;
+    opacity: 0;
   }
   .text_paralax{
     z-index: 100;
@@ -807,6 +923,7 @@ body a{
     width: 50%;
     text-align: center;
     margin-bottom: 30px;
+    opacity: 0;
   }
   .btn_paralax,
   .btn_grid_info{
@@ -830,6 +947,19 @@ body a{
   .carousel_miembros{
       padding: 90px 0px 150px 0px;
       background: #fafafa;
+      opacity: 0;
+  }
+  .carousel_miembros.active{
+      animation: carousel_miembros_animation .8s ease-out .3s forwards;
+  }
+  @keyframes carousel_miembros_animation{
+      0%{
+        opacity: 0;
+      }
+      100%{
+          opacity: 1;
+
+      }
   }
   .carousel_title{
     font-family: 'Noto Sans JP', sans-serif;
@@ -886,6 +1016,7 @@ body a{
     outline: none;
     display: block;
     background: #cccccc;
+    border-radius: 0px;
 }
 .carousel__indicadores .glider-dot:hover{
     background: #999999;
@@ -894,3 +1025,4 @@ body a{
     background: #444444;
 
 }
+

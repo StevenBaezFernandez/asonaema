@@ -18,12 +18,17 @@ const overlay = document.querySelector(".overlay");
 const btn_show_movil = document.querySelector("#btn_show_movil");
 const btn_hide_movil = document.querySelector("#btn_hide_movil");
 const blanco = document.querySelector(".blanco");
+const column_info_container = document.querySelector(".column_info_container");
+const grid_info1 = document.querySelectorAll("#grid_info1");
+const grid_info2 = document.querySelectorAll("#grid_info2");
+
 
 
 
 
 
 window.addEventListener("load", ()=>{
+    console.log(document.querySelectorAll('.grid_img')[0]);
     setInterval(() => {
         if(blanco){
 
@@ -104,7 +109,33 @@ function scrollAnimation(){
             btn_ir_arriba.classList.remove("active");
         }
 
-
+        let obj_position1 = column_info_container.getBoundingClientRect().top;
+        let obj_position2 = document.querySelector('#grid_info1').getBoundingClientRect().top;
+        let obj_position3 = document.querySelector('#grid_info2').getBoundingClientRect().top;
+        let obj_position4 = document.querySelector('#main_paralax').getBoundingClientRect().top;
+        let obj_position5 = document.querySelector('#carousel_miembros').getBoundingClientRect().top;
+        let display_size = window.innerHeight/1.3;
+        let img = document.querySelector('.grid_img').getBoundingClientRect().top;
+        console.log(img);
+        if(obj_position1 <= display_size){
+            column_info_container.classList.add('active');
+        }
+        if(obj_position2 < display_size){
+            document.querySelector('#grid_info1').classList.add('active');
+            console.log("Eureka!");
+        }
+        if(obj_position3 < display_size){
+            document.querySelector('#grid_info2').classList.add('active');
+            console.log("Eureka!");
+        }
+        if(obj_position4 < display_size){
+            document.querySelector('#main_paralax').classList.add('active');
+            console.log("Eureka!");
+        }
+        if(obj_position5 < display_size){
+            document.querySelector('#carousel_miembros').classList.add('active');
+            console.log("Eureka!");
+        }
     });
 }
 
