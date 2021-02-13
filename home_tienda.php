@@ -28,12 +28,12 @@
 
 
 
-        $home_tienda .= "<img src='http://localhost/asonaema/img/bg_carousel_tienda_home.jpg' class='d-block w-100' alt='...'>";
+        $home_tienda .= "<img src='https://web-asonaema.000webhostapp.com/img/bg_carousel_tienda_home.jpg' class='d-block w-100' alt='...'>";
         $home_tienda .= "<div class='carousel-caption carousel_caption_tieda_home'>";
         $home_tienda .= "<div class='caption_child caption_child1'>";
         $home_tienda .= "<h2 class='title_carousel_pruct_tienda_home'>".$row['nombre_prod']."</h2>";
         $home_tienda .= "<p class='descripcion_product_tienda_home'>".$row['descripcion_prod']."</p>";
-        $home_tienda .= "<a href='http://localhost/asonaema/tienda/producto/".$row['id_prod']."' class='btn_ver_producto_carousel'>Ver Producto <i class='fas fa-eye'></i></a>";
+        $home_tienda .= "<a href='https://web-asonaema.000webhostapp.com/tienda/producto/".$row['id_prod']."' class='btn_ver_producto_carousel'>Ver Producto <i class='fas fa-eye'></i></a>";
         $home_tienda .= "</div>";
         $home_tienda .= "<div class='caption_child caption_child2'>";
         $home_tienda .= "<img src='".$row['img_prod']."' alt=''>";
@@ -45,7 +45,7 @@
     }
 
     while($row = mysqli_fetch_array($resul_capilares)){
-        $capilares_recomendados .= "<a href='http://localhost/asonaema/tienda/producto/".$row['id_prod']."'>";
+        $capilares_recomendados .= "<a href='https://web-asonaema.000webhostapp.com/tienda/producto/".$row['id_prod']."'>";
         $capilares_recomendados .= "<div class='carousel_tienda_home_elemento'>";
         $capilares_recomendados .= "<div class='header_img_card'>";
         $capilares_recomendados .= "<img src='".$row['img_prod']."' class='carousel_tienda_home_img' alt=''>";
@@ -62,7 +62,7 @@
         $capilares_recomendados .= "</a>"; 
     }
     while($row = mysqli_fetch_array($resul_piel)){
-        $piel_recomendados .= "<a href='http://localhost/asonaema/tienda/producto/".$row['id_prod']."'>";
+        $piel_recomendados .= "<a href='https://web-asonaema.000webhostapp.com/tienda/producto/".$row['id_prod']."'>";
         $piel_recomendados .= "<div class='carousel_tienda_home_elemento'>";
         $piel_recomendados .= "<div class='header_img_card'>";
         $piel_recomendados .= "<img src='".$row['img_prod']."' class='carousel_tienda_home_img' alt=''>";
@@ -79,7 +79,7 @@
         $piel_recomendados .= "</a>"; 
     }
     while($row = mysqli_fetch_array($resul_bisuteria)){
-        $bisuteria_recomendados .= "<a href='http://localhost/asonaema/tienda/producto/".$row['id_prod']."'>";
+        $bisuteria_recomendados .= "<a href='https://web-asonaema.000webhostapp.com/tienda/producto/".$row['id_prod']."'>";
         $bisuteria_recomendados .= "<div class='carousel_tienda_home_elemento'>";
         $bisuteria_recomendados .= "<div class='header_img_card'>";
         $bisuteria_recomendados .= "<img src='".$row['img_prod']."' class='carousel_tienda_home_img' alt=''>";
@@ -112,9 +112,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
-    <link rel="stylesheet" href="http://localhost/asonaema/css/main.css">
-    <link rel="stylesheet" href="http://localhost/asonaema/css/responsive.css">
-    <link rel="shortcut icon" href="http://localhost/asonaema/img/logo_prueba.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://web-asonaema.000webhostapp.com/css/main.css">
+    <link rel="stylesheet" href="https://web-asonaema.000webhostapp.com/css/responsive.css">
+    <link rel="shortcut icon" href="https://web-asonaema.000webhostapp.com/img/logo_prueba.svg" type="image/x-icon">
     <title>Home - proctos para el pelo</title>
 </head>
 <body>
@@ -152,41 +152,41 @@
                 
 
                 <div class="search_btn">
-                    <img src="http://localhost/asonaema/img/search_icon.svg" alt="button search">
+                    <img src="https://web-asonaema.000webhostapp.com/img/search_icon.svg" alt="button search">
                 </div>
             </div>
             
         </div>
         <div class="header2">
             <a href="/asonaema" class="contenedor_img_logo">
-            <img src="http://localhost/asonaema/img/logo_prueba.svg" alt="logotipo">
+            <img src="https://web-asonaema.000webhostapp.com/img/logo_prueba.svg" alt="logotipo">
             </a>
             
             <ul class="menu principal">
                 <li><a href="http://localhost/asonaema" class="activo enlace_inicio">INICIO</a></li>
-                <li class=" activo enlace_produsctos"><a href="http://localhost/asonaema/tienda">PRODUCTOS</a></li>
-                <li class="enlace_sobre_nosotros"><a href="http://localhost/asonaema/nosotros" >SOBRE NOSOTROS</a></li>
-                <li class="enlace_galeria"><a href="http://localhost/asonaema/galeria">GALERIA</a></li>
+                <li class=" activo enlace_produsctos"><a href="https://web-asonaema.000webhostapp.com/tienda">PRODUCTOS</a></li>
+                <li class="enlace_sobre_nosotros"><a href="https://web-asonaema.000webhostapp.com/nosotros" >SOBRE NOSOTROS</a></li>
+                <li class="enlace_galeria"><a href="https://web-asonaema.000webhostapp.com/galeria">GALERIA</a></li>
                 <li><a href="">MÁS <i class="fas fa-angle-down"></i></a>
                     <ul class="submenu">
-                        <li><a href="http://localhost/asonaema/galeria" class="mas_galeria">Galeria</a></li>
-                        <li><a href="http://localhost/asonaema/nosotros" class="mas_sobre_nosotros">sobre nosotros</a></li>
-                        <li><a href="http://localhost/asonaema/tienda" class="mas_productos">productos</a></li>
+                        <li><a href="https://web-asonaema.000webhostapp.com/galeria" class="mas_galeria">Galeria</a></li>
+                        <li><a href="https://web-asonaema.000webhostapp.com/nosotros" class="mas_sobre_nosotros">sobre nosotros</a></li>
+                        <li><a href="https://web-asonaema.000webhostapp.com/tienda" class="mas_productos">productos</a></li>
                         <li><a href=""></a></li>
                     </ul>
                 </li>
             </ul>
-            <a href="http://localhost/asonaema/contacto"><button role="button" class="btn-main"><i class="fas fa-envelope"></i> CONTACTO</button></a>
+            <a href="https://web-asonaema.000webhostapp.com/contacto"><button role="button" class="btn-main"><i class="fas fa-envelope"></i> CONTACTO</button></a>
             
         </div>
     </header>
     <div class="menu_scroll">
         <ul class="menu scroll">
             <li><a href="http://localhost/asonaema" class="activo enlace_inicio">INICIO</a></li>
-            <li class=" activo enlace_produsctos"><a href="http://localhost/asonaema/tienda">PRODUCTOS</a></li>
-            <li class="enlace_sobre_nosotros"><a href="http://localhost/asonaema/nosotros" >SOBRE NOSOTROS</a></li>
-            <li class="enlace_galeria"><a href="http://localhost/asonaema/galeria">GALERIA</a></li>
-            <li class="enlace_galeria"><a href="http://localhost/asonaema/contacto">CONTACTO</a></li>
+            <li class=" activo enlace_produsctos"><a href="https://web-asonaema.000webhostapp.com/tienda">PRODUCTOS</a></li>
+            <li class="enlace_sobre_nosotros"><a href="https://web-asonaema.000webhostapp.com/nosotros" >SOBRE NOSOTROS</a></li>
+            <li class="enlace_galeria"><a href="https://web-asonaema.000webhostapp.com/galeria">GALERIA</a></li>
+            <li class="enlace_galeria"><a href="https://web-asonaema.000webhostapp.com/contacto">CONTACTO</a></li>
             
         </ul>
     </div>
@@ -199,17 +199,17 @@
         </div>
         <ul class="menu movil">
             <li><a href="http://localhost/asonaema" class="activo enlace_inicio"><span class="icon_movil fa fa-home"></span> INICIO</a></li>
-            <li class=" activo enlace_produsctos"><a href="http://localhost/asonaema/tienda"><span class="icon_movil fa fa-box"></span> PRODUCTOS</a></li>
-            <li class="enlace_sobre_nosotros"><a href="http://localhost/asonaema/nosotros" ><span class="icon_movil fa fa-users"></span> SOBRE NOSOTROS</a></li>
-            <li class="enlace_galeria"><a href="http://localhost/asonaema/galeria"><span class="icon_movil fa fa-image"></span> GALERIA</a></li>
-            <li class="enlace_galeria"><a href="http://localhost/asonaema/contacto"><span class="icon_movil fa fa-envelope"></span> CONTACTO</a></li>
+            <li class=" activo enlace_produsctos"><a href="https://web-asonaema.000webhostapp.com/tienda"><span class="icon_movil fa fa-box"></span> PRODUCTOS</a></li>
+            <li class="enlace_sobre_nosotros"><a href="https://web-asonaema.000webhostapp.com/nosotros" ><span class="icon_movil fa fa-users"></span> SOBRE NOSOTROS</a></li>
+            <li class="enlace_galeria"><a href="https://web-asonaema.000webhostapp.com/galeria"><span class="icon_movil fa fa-image"></span> GALERIA</a></li>
+            <li class="enlace_galeria"><a href="https://web-asonaema.000webhostapp.com/contacto"><span class="icon_movil fa fa-envelope"></span> CONTACTO</a></li>
             
         </ul>
     </div>
     <div class="panel_busqueda">
         <div class="cuadro_busqueda">
             <input type="text" placeholder="Buscar..." class="input_busqueda" id="input_busqueda">
-            <img src="http://localhost/asonaema/img/cancel_icon.svg" class="cerrar_busqueda" alt="">
+            <img src="https://web-asonaema.000webhostapp.com/img/cancel_icon.svg" class="cerrar_busqueda" alt="">
         </div>
         <div class="resultado_busqueda">
             <h3 class="alerta_no_funciona"> <i class="fa fa-exclamation-triangle"></i> El buscador no esta listo todavia estamos trabando en ello.</h3>
@@ -407,19 +407,19 @@
         <div class="pie">
             <ul class="menu foot">
                 <li><a href="http://localhost/asonaema" class="activo enlace_inicio">INICIO</a></li>
-                <li class=" activo enlace_produsctos"><a href="http://localhost/asonaema/tienda">PRODUCTOS</a></li>
-                <li class="enlace_sobre_nosotros"><a href="http://localhost/asonaema/nosotros" >SOBRE NOSOTROS</a></li>
-                <li class="enlace_galeria"><a href="http://localhost/asonaema/galeria">GALERIA</a></li>
-                <li class="enlace_contacto"><a href="http://localhost/asonaema/contacto">CONTACTO</a></li>
+                <li class=" activo enlace_produsctos"><a href="https://web-asonaema.000webhostapp.com/tienda">PRODUCTOS</a></li>
+                <li class="enlace_sobre_nosotros"><a href="https://web-asonaema.000webhostapp.com/nosotros" >SOBRE NOSOTROS</a></li>
+                <li class="enlace_galeria"><a href="https://web-asonaema.000webhostapp.com/galeria">GALERIA</a></li>
+                <li class="enlace_contacto"><a href="https://web-asonaema.000webhostapp.com/contacto">CONTACTO</a></li>
             </ul>
             <p>© Steven báez fernández - 2020</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <script src="http://localhost/asonaema/js/main.js"></script>
+    <script src="https://web-asonaema.000webhostapp.com/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-    <script src="http://localhost/asonaema/js/carousel.config.js"></script>
+    <script src="https://web-asonaema.000webhostapp.com/js/carousel.config.js"></script>
     
 </body>
 </html>

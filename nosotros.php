@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="shortcut icon" href="http://localhost/asonaema/img/logo_prueba.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="https://web-asonaema.000webhostapp.com/img/logo_prueba.svg" type="image/x-icon">
     <title>Home - proctos para el pelo</title>
 </head>
 <body>
@@ -52,24 +52,24 @@
         </div>
         <div class="header2">
             <a href="/asonaema" class="contenedor_img_logo">
-            <img src="http://localhost/asonaema/img/logo_prueba.svg" alt="logotipo">
+            <img src="https://web-asonaema.000webhostapp.com/img/logo_prueba.svg" alt="logotipo">
             </a>
             
             <ul class="menu principal">
                 <li><a href="http://localhost/asonaema" class="activo enlace_inicio">INICIO</a></li>
-                <li class=" activo enlace_produsctos"><a href="http://localhost/asonaema/tienda">PRODUCTOS</a></li>
-                <li class="enlace_sobre_nosotros"><a href="http://localhost/asonaema/nosotros" >SOBRE NOSOTROS</a></li>
-                <li class="enlace_galeria"><a href="http://localhost/asonaema/galeria">GALERIA</a></li>
+                <li class=" activo enlace_produsctos"><a href="https://web-asonaema.000webhostapp.com/tienda">PRODUCTOS</a></li>
+                <li class="enlace_sobre_nosotros"><a href="https://web-asonaema.000webhostapp.com/nosotros" >SOBRE NOSOTROS</a></li>
+                <li class="enlace_galeria"><a href="https://web-asonaema.000webhostapp.com/galeria">GALERIA</a></li>
                 <li><a href="">MÁS <i class="fas fa-angle-down"></i></a>
                     <ul class="submenu">
-                        <li><a href="http://localhost/asonaema/galeria" class="mas_galeria">Galeria</a></li>
-                        <li><a href="http://localhost/asonaema/nosotros" class="mas_sobre_nosotros">sobre nosotros</a></li>
-                        <li><a href="http://localhost/asonaema/tienda" class="mas_productos">productos</a></li>
+                        <li><a href="https://web-asonaema.000webhostapp.com/galeria" class="mas_galeria">Galeria</a></li>
+                        <li><a href="https://web-asonaema.000webhostapp.com/nosotros" class="mas_sobre_nosotros">sobre nosotros</a></li>
+                        <li><a href="https://web-asonaema.000webhostapp.com/tienda" class="mas_productos">productos</a></li>
                         <li><a href=""></a></li>
                     </ul>
                 </li>
             </ul>
-            <a href="http://localhost/asonaema/contacto"><button role="button" class="btn-main"><i class="fas fa-envelope"></i> CONTACTO</button></a>
+            <a href="https://web-asonaema.000webhostapp.com/contacto"><button role="button" class="btn-main"><i class="fas fa-envelope"></i> CONTACTO</button></a>
             
         </div>
     </header>
