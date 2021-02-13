@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="http://localhost/asonaema/img/logo_prueba.svg" type="image/x-icon">
     <title>Home - proctos para el pelo</title>
 </head>
 <body>
@@ -21,45 +21,61 @@
 
             <div class="menu_social">
                 <div class="social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-google-plus"></i></a>
+                    <a href="#">
+                        <i class="fab fa-facebook-f">
+                            <span class="tooltips facebook">Facebook</span>
+                        </i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-instagram">
+                            <span class="tooltips instagram">Instagram</span>
+                        </i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-twitter">
+                            <span class="tooltips twitter">Twitter</span>
+                        </i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-google-plus">
+                            <span class="tooltips google_plus">Google plus</span>
+                        </i>
+                    </a>
                 </div>
                 
 
                 <div class="search_btn">
-                    <i class="fa fa-search"></i>
+                    <img src="img/search_icon.svg" alt="button search">
                 </div>
             </div>
             
         </div>
         <div class="header2">
             <a href="/asonaema" class="contenedor_img_logo">
-                <img src="img/logo.png" alt="logotipo">
+            <img src="http://localhost/asonaema/img/logo_prueba.svg" alt="logotipo">
             </a>
             
             <ul class="menu principal">
-                <li><a href="" class="activo enlace_inicio">INICIO</a></li>
-                <li class=" activo enlace_produsctos"><a href="tienda">PRODUCTOS</a></li>
-                <li class="enlace_sobre_nosotros"><a href="nosotros" >SOBRE NOSOTROS</a></li>
-                <li class="enlace_galeria"><a href="galeria">GALERIA</a></li>
+                <li><a href="http://localhost/asonaema" class="activo enlace_inicio">INICIO</a></li>
+                <li class=" activo enlace_produsctos"><a href="http://localhost/asonaema/tienda">PRODUCTOS</a></li>
+                <li class="enlace_sobre_nosotros"><a href="http://localhost/asonaema/nosotros" >SOBRE NOSOTROS</a></li>
+                <li class="enlace_galeria"><a href="http://localhost/asonaema/galeria">GALERIA</a></li>
                 <li><a href="">MÁS <i class="fas fa-angle-down"></i></a>
                     <ul class="submenu">
-                        <li><a href="" class="mas_galeria">Galeria</a></li>
-                        <li><a href="" class="mas_sobre_nosotros">sobre nosotros</a></li>
-                        <li><a href="" class="mas_productos">productos</a></li>
+                        <li><a href="http://localhost/asonaema/galeria" class="mas_galeria">Galeria</a></li>
+                        <li><a href="http://localhost/asonaema/nosotros" class="mas_sobre_nosotros">sobre nosotros</a></li>
+                        <li><a href="http://localhost/asonaema/tienda" class="mas_productos">productos</a></li>
                         <li><a href=""></a></li>
                     </ul>
                 </li>
             </ul>
-            <a href="contacto"><button role="button" class="btn-main">CONTACTO</button></a>
+            <a href="http://localhost/asonaema/contacto"><button role="button" class="btn-main"><i class="fas fa-envelope"></i> CONTACTO</button></a>
             
         </div>
     </header>
     <div class="menu_scroll">
         <ul class="menu scroll">
-            <li><a href="" class="activo enlace_inicio">INICIO</a></li>
+            <li><a href="http://localhost/asonaema" class="activo enlace_inicio">INICIO</a></li>
             <li class=" activo enlace_produsctos"><a href="tienda">PRODUCTOS</a></li>
             <li class="enlace_sobre_nosotros"><a href="nosotros" >SOBRE NOSOTROS</a></li>
             <li class="enlace_galeria"><a href="galeria">GALERIA</a></li>
@@ -75,7 +91,7 @@
             </button>
         </div>
         <ul class="menu movil">
-            <li><a href="" class="activo enlace_inicio"><span class="icon_movil fa fa-home"></span> INICIO</a></li>
+            <li><a href="http://localhost/asonaema" class="activo enlace_inicio"><span class="icon_movil fa fa-home"></span> INICIO</a></li>
             <li class=" activo enlace_produsctos"><a href="tienda"><span class="icon_movil fa fa-box"></span> PRODUCTOS</a></li>
             <li class="enlace_sobre_nosotros"><a href="nosotros" ><span class="icon_movil fa fa-users"></span> SOBRE NOSOTROS</a></li>
             <li class="enlace_galeria"><a href="galeria"><span class="icon_movil fa fa-image"></span> GALERIA</a></li>
@@ -86,7 +102,7 @@
     <div class="panel_busqueda">
         <div class="cuadro_busqueda">
             <input type="text" placeholder="Buscar..." class="input_busqueda" id="input_busqueda">
-            <i class="fa fa-times cerrar_busqueda"></i>
+            <img src="img/cancel_icon.svg" class="cerrar_busqueda" alt="">
         </div>
         <div class="resultado_busqueda">
             <h3 class="alerta_no_funciona"> <i class="fa fa-exclamation-triangle"></i> El buscador no esta listo todavia estamos trabando en ello.</h3>
@@ -195,7 +211,7 @@
         </div>
         <div class="pie">
             <ul class="menu foot">
-                <li><a href="" class="activo enlace_inicio">INICIO</a></li>
+                <li><a href="http://localhost/asonaema" class="activo enlace_inicio">INICIO</a></li>
                 <li class=" activo enlace_produsctos"><a href="tienda">PRODUCTOS</a></li>
                 <li class="enlace_sobre_nosotros"><a href="nosotros" >SOBRE NOSOTROS</a></li>
                 <li class="enlace_galeria"><a href="galeria">GALERIA</a></li>

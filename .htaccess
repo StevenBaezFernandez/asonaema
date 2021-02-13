@@ -1,0 +1,9 @@
+Options All -Indexes
+RewriteEngine on
+ErrorDocument 404 /asonaema/404.php
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f  
+#RewriteRule ^(.*) $1.php
+
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]

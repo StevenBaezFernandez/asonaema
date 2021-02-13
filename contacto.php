@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="http://localhost/asonaema/img/logo_prueba.svg" type="image/x-icon">
     <title>Home - proctos para el pelo</title>
 </head>
 <body>
@@ -21,45 +21,61 @@
 
             <div class="menu_social">
                 <div class="social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-google-plus"></i></a>
+                    <a href="#">
+                        <i class="fab fa-facebook-f">
+                            <span class="tooltips facebook">Facebook</span>
+                        </i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-instagram">
+                            <span class="tooltips instagram">Instagram</span>
+                        </i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-twitter">
+                            <span class="tooltips twitter">Twitter</span>
+                        </i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-google-plus">
+                            <span class="tooltips google_plus">Google plus</span>
+                        </i>
+                    </a>
                 </div>
                 
 
                 <div class="search_btn">
-                    <i class="fa fa-search"></i>
+                    <img src="img/search_icon.svg" alt="button search">
                 </div>
             </div>
             
         </div>
         <div class="header2">
             <a href="/asonaema" class="contenedor_img_logo">
-                <img src="img/logo.png" alt="logotipo">
+            <img src="http://localhost/asonaema/img/logo_prueba.svg" alt="logotipo">
             </a>
             
             <ul class="menu principal">
-                <li><a href="" class="activo enlace_inicio">INICIO</a></li>
-                <li class=" activo enlace_produsctos"><a href="tienda">PRODUCTOS</a></li>
-                <li class="enlace_sobre_nosotros"><a href="nosotros" >SOBRE NOSOTROS</a></li>
-                <li class="enlace_galeria"><a href="galeria">GALERIA</a></li>
+                <li><a href="http://localhost/asonaema" class="activo enlace_inicio">INICIO</a></li>
+                <li class=" activo enlace_produsctos"><a href="http://localhost/asonaema/tienda">PRODUCTOS</a></li>
+                <li class="enlace_sobre_nosotros"><a href="http://localhost/asonaema/nosotros" >SOBRE NOSOTROS</a></li>
+                <li class="enlace_galeria"><a href="http://localhost/asonaema/galeria">GALERIA</a></li>
                 <li><a href="">MÁS <i class="fas fa-angle-down"></i></a>
                     <ul class="submenu">
-                        <li><a href="" class="mas_galeria">Galeria</a></li>
-                        <li><a href="" class="mas_sobre_nosotros">sobre nosotros</a></li>
-                        <li><a href="" class="mas_productos">productos</a></li>
+                        <li><a href="http://localhost/asonaema/galeria" class="mas_galeria">Galeria</a></li>
+                        <li><a href="http://localhost/asonaema/nosotros" class="mas_sobre_nosotros">sobre nosotros</a></li>
+                        <li><a href="http://localhost/asonaema/tienda" class="mas_productos">productos</a></li>
                         <li><a href=""></a></li>
                     </ul>
                 </li>
             </ul>
-            <a href="contacto"><button role="button" class="btn-main">CONTACTO</button></a>
+            <a href="http://localhost/asonaema/contacto"><button role="button" class="btn-main"><i class="fas fa-envelope"></i> CONTACTO</button></a>
             
         </div>
     </header>
     <div class="menu_scroll">
         <ul class="menu scroll">
-            <li><a href="" class="activo enlace_inicio">INICIO</a></li>
+            <li><a href="/asonaema" class="activo enlace_inicio">INICIO</a></li>
             <li class=" activo enlace_produsctos"><a href="tienda">PRODUCTOS</a></li>
             <li class="enlace_sobre_nosotros"><a href="nosotros" >SOBRE NOSOTROS</a></li>
             <li class="enlace_galeria"><a href="galeria">GALERIA</a></li>
@@ -75,7 +91,7 @@
             </button>
         </div>
         <ul class="menu movil">
-            <li><a href="" class="activo enlace_inicio"><span class="icon_movil fa fa-home"></span> INICIO</a></li>
+            <li><a href="/asonaema" class="activo enlace_inicio"><span class="icon_movil fa fa-home"></span> INICIO</a></li>
             <li class=" activo enlace_produsctos"><a href="tienda"><span class="icon_movil fa fa-box"></span> PRODUCTOS</a></li>
             <li class="enlace_sobre_nosotros"><a href="nosotros" ><span class="icon_movil fa fa-users"></span> SOBRE NOSOTROS</a></li>
             <li class="enlace_galeria"><a href="galeria"><span class="icon_movil fa fa-image"></span> GALERIA</a></li>
@@ -86,10 +102,60 @@
     <div class="panel_busqueda">
         <div class="cuadro_busqueda">
             <input type="text" placeholder="Buscar..." class="input_busqueda" id="input_busqueda">
-            <i class="fa fa-times cerrar_busqueda"></i>
+            <img src="img/cancel_icon.svg" class="cerrar_busqueda" alt="">
         </div>
         <div class="resultado_busqueda">
             <h3 class="alerta_no_funciona"> <i class="fa fa-exclamation-triangle"></i> El buscador no esta listo todavia estamos trabando en ello.</h3>
+        </div>
+    </div>
+
+
+    <div class="paralax_contact">
+        <h2 class="paralax_contact_title">Formulario de contactos</h2>
+        <p class="paralax_contact_text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores atque, quae ipsa cupiditate recusandae dicta itaque.
+        </p>
+    </div>
+
+    <div class="form_contact_container">
+        <div class="info_social_media">
+            <h3 class="info_social_media_title">No dudes en escribirnos o seguirnos en los siguientes enlaces a nuestas redes sociales:</h3>
+            <p class="show_email"><i class="fas fa-envelope"></i> Contacto@asonaema.com</p>
+            <div class="contact_btns_social_media">
+                <a href="#" class="btn_facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="btn_instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="btn_twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="btn_google_plus"><i class="fab fa-google-plus"></i></a>
+
+            </div>
+        </div>
+        <div class="form_contact">
+            <h3 class="form_contact_title">Contáctanos</h3>
+            <p class="form_contact_text">Los campos marcados con <span class="campo_requerido">*</span> son obligatorios</p>
+            <form action="">
+                <div class="input_group_contact">
+                    <label for="nombre">Nombres <span class="campo_requerido">*</span></label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                </div>
+                <div class="input_group_contact">
+                    <label for="correo">Correo electronico <span class="campo_requerido">*</span></label>
+                    <input type="email" name="correo" id="correo" placeholder="Correo electronico" required>
+                </div>
+                <div class="input_group_contact">
+                    <label for="motivo">Elige un motivo <span class="campo_requerido">*</span></label>
+                    <select name="motivo" id="motivo" required>
+                        <option value="duda" selected>Alguna duda</option>
+                        <option value="duda">Formar parte de nosotros</option>
+                        <option value="duda">Compra</option>
+                        <option value="duda">Otro</option>
+                    </select>
+                </div>
+                <div class="input_group_contact">
+                    <label for="mensaje">Escribe tu mensaje aqui <span class="campo_requerido">*</span></label>
+                    <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje" required></textarea>
+                </div>
+                <button type="submit" class="form_btn_send">Enviar <i class="fas fa-paper-plane"></i></button>
+            </form>
         </div>
     </div>
 
@@ -108,28 +174,6 @@
         </div>
     </div>
 
-
-    <script id="dsq-count-scr" src="//dilorenst-1.disqus.com/count.js" async></script>
-    <div id="disqus_thread"></div>
-    <script>
-
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://dilorenst-1.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 
 
@@ -195,7 +239,7 @@
         </div>
         <div class="pie">
             <ul class="menu foot">
-                <li><a href="" class="activo enlace_inicio">INICIO</a></li>
+                <li><a href="/asonaema" class="activo enlace_inicio">INICIO</a></li>
                 <li class=" activo enlace_produsctos"><a href="tienda">PRODUCTOS</a></li>
                 <li class="enlace_sobre_nosotros"><a href="nosotros" >SOBRE NOSOTROS</a></li>
                 <li class="enlace_galeria"><a href="galeria">GALERIA</a></li>
