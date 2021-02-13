@@ -39,9 +39,9 @@
         }
     }elseif($cantidad_elementos_url_json == 2){
         if($arr_url[0] == 'tienda' && $arr_url[1] == 'categoria'){
-            header('location: http://localhost/asonaema/tienda');
+            header('location: https://web-asonaema.000webhostapp.com/tienda');
         }elseif($arr_url[0] == 'tienda' && $arr_url[1] == 'producto'){
-            header('location: http://localhost/asonaema/tienda');
+            header('location: https://web-asonaema.000webhostapp.com/tienda');
         }
     }
     elseif($cantidad_elementos_url_json == 3){

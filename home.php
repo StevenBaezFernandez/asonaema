@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
-    <link rel="stylesheet" href="http://localhost/asonaema/css/main.css">
-    <link rel="stylesheet" href="http://localhost/asonaema/css/responsive.css">
-    <link rel="shortcut icon" href="http://localhost/asonaema/img/logo_prueba.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://web-asonaema.000webhostapp.com/css/main.css">
+    <link rel="stylesheet" href="https://web-asonaema.000webhostapp.com/css/responsive.css">
+    <link rel="shortcut icon" href="https://web-asonaema.000webhostapp.com/img/logo_prueba.svg" type="image/x-icon">
     <title>Home - proctos para el pelo</title>
 </head>
 <body>
@@ -58,24 +58,24 @@
         </div>
         <div class="header2">
             <a href="/asonaema" class="contenedor_img_logo">
-                <img src="http://localhost/asonaema/img/logo_prueba.svg" alt="logotipo">
+                <img src="https://web-asonaema.000webhostapp.com/img/logo_prueba.svg" alt="logotipo">
             </a>
             
             <ul class="menu principal">
                 <li><a href="" class="activo enlace_inicio">INICIO</a></li>
-                <li class=" activo enlace_produsctos"><a href="http://localhost/asonaema/tienda">PRODUCTOS</a></li>
-                <li class="enlace_sobre_nosotros"><a href="http://localhost/asonaema/nosotros" >SOBRE NOSOTROS</a></li>
-                <li class="enlace_galeria"><a href="http://localhost/asonaema/galeria">GALERIA</a></li>
+                <li class=" activo enlace_produsctos"><a href="https://web-asonaema.000webhostapp.com/tienda">PRODUCTOS</a></li>
+                <li class="enlace_sobre_nosotros"><a href="https://web-asonaema.000webhostapp.com/nosotros" >SOBRE NOSOTROS</a></li>
+                <li class="enlace_galeria"><a href="https://web-asonaema.000webhostapp.com/galeria">GALERIA</a></li>
                 <li><a href="">MÁS <i class="fas fa-angle-down"></i></a>
                     <ul class="submenu">
-                        <li><a href="http://localhost/asonaema/galeria" class="mas_galeria">Galeria</a></li>
-                        <li><a href="http://localhost/asonaema/nosotros" class="mas_sobre_nosotros">sobre nosotros</a></li>
-                        <li><a href="http://localhost/asonaema/tienda" class="mas_productos">productos</a></li>
+                        <li><a href="https://web-asonaema.000webhostapp.com/galeria" class="mas_galeria">Galeria</a></li>
+                        <li><a href="https://web-asonaema.000webhostapp.com/nosotros" class="mas_sobre_nosotros">sobre nosotros</a></li>
+                        <li><a href="https://web-asonaema.000webhostapp.com/tienda" class="mas_productos">productos</a></li>
                         <li><a href=""></a></li>
                     </ul>
                 </li>
             </ul>
-            <a href="http://localhost/asonaema/contacto"><button role="button" class="btn-main"><i class="fas fa-envelope"></i> CONTACTO</button></a>
+            <a href="https://web-asonaema.000webhostapp.com/contacto"><button role="button" class="btn-main"><i class="fas fa-envelope"></i> CONTACTO</button></a>
             
         </div>
     </header>
@@ -197,7 +197,7 @@
         <div id="particles-js"></div> 
         
         <div class="column_info">
-            <img src="http://localhost/asonaema/img/emprendedor.svg" class="column_info_imgtop" alt="">
+            <img src="https://web-asonaema.000webhostapp.com/img/emprendedor.svg" class="column_info_imgtop" alt="">
             <h2 class="column_info_title">¿Que es un emprendedor?</h2>
             <p class="column_info_text">
                 Un emprendedor es una persona que tiene la capacidad de descubrir e identificar algún tipo de oportunidad 
@@ -206,7 +206,7 @@
             <button class="column_info_button" id="btn_mas_info_que_es_un_emprendedor">Más Información <i class="fas fa-arrow-right"></i></button>
         </div>
         <div class="column_info">
-            <img src="http://localhost/asonaema/img/caracteristicas_emprendedor.svg" class="column_info_imgtop" alt="">
+            <img src="https://web-asonaema.000webhostapp.com/img/caracteristicas_emprendedor.svg" class="column_info_imgtop" alt="">
             <h2 class="column_info_title">Característica de un emprendedor</h2>
             <p class="column_info_text">
                 Emprender exige mucho esfuerzo y trabajo, incertidumbre, miedos al cambio, ambición y vivir fuera de la zona 
@@ -216,7 +216,7 @@
             <button class="column_info_button" id="btn_mas_info_caracteristicas_emprendedor">Más Información <i class="fas fa-arrow-right"></i></button>
         </div>
         <div class="column_info">
-            <img src="http://localhost/asonaema/img/retos_emprendedor.svg" class="column_info_imgtop" alt="">
+            <img src="https://web-asonaema.000webhostapp.com/img/retos_emprendedor.svg" class="column_info_imgtop" alt="">
             <h2 class="column_info_title">Retos que debe superar un emprendedor</h2>
             <p class="column_info_text">
                 Conseguir la libertad financiera con una idea de negocio es un asunto que pone de cabeza a más de un emprendedor; 
@@ -353,7 +353,7 @@
     <div class="overlay mas_info">
         <div class="mas_info_que_es_un_emprendedor">
             <i class="cerrar_mas_info fas fa-times"></i>
-            <img src="http://localhost/asonaema/img/emprendedor.svg" class="mas_info_img_que_es_un_emprendedor" alt="">
+            <img src="https://web-asonaema.000webhostapp.com/img/emprendedor.svg" class="mas_info_img_que_es_un_emprendedor" alt="">
             <h2 class="mas_info_title_que_es_un_emprendedor">¿Que es un emprendedor?</h2>
             <div class="mas_info_text_que_es_un_emprendedor">
                 <p>
@@ -399,7 +399,7 @@
         </div>
         <div class="mas_info_caracteristicas_emprendedor">
             <i class="cerrar_mas_info fas fa-times"></i>
-            <img src="http://localhost/asonaema/img/caracteristicas_emprendedor.svg" class="mas_info_img_que_es_un_emprendedor" alt="">
+            <img src="https://web-asonaema.000webhostapp.com/img/caracteristicas_emprendedor.svg" class="mas_info_img_que_es_un_emprendedor" alt="">
             <h2 class="mas_info_title_que_es_un_emprendedor">Característica de un emprendedor</h2>
             <div class="mas_info_text_que_es_un_emprendedor">
                 <p>
@@ -442,7 +442,7 @@
         </div>
         <div class="mas_info_retos_emprendedor">
             <i class="cerrar_mas_info fas fa-times"></i>
-            <img src="http://localhost/asonaema/img/retos_emprendedor.svg" class="mas_info_img_que_es_un_emprendedor" alt="">
+            <img src="https://web-asonaema.000webhostapp.com/img/retos_emprendedor.svg" class="mas_info_img_que_es_un_emprendedor" alt="">
             <h2 class="mas_info_title_que_es_un_emprendedor">Retos que debe superar un emprendedor</h2>
             <div class="mas_info_text_que_es_un_emprendedor">
                 <p>
