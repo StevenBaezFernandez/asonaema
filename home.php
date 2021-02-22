@@ -15,70 +15,9 @@
     <title>Home - proctos para el pelo</title>
 </head>
 <body>
-    <header class="header-father">
-        <div class="header1">
-            <div class="left">
-                <i class="fa fa-bars btn-menu" id="btn_show_movil"></i>
-                <h1>¡Puedes tener un pelo natural y sin quimicos!</h1>
-            </div>
-            
-
-            <div class="menu_social">
-                <div class="social">
-                    <a href="#">
-                        <i class="fab fa-facebook-f">
-                            <span class="tooltips facebook">Facebook</span>
-                        </i>
-                    </a>
-                    <a href="#">
-                        <i class="fab fa-instagram">
-                            <span class="tooltips instagram">Instagram</span>
-                        </i>
-                    </a>
-                    <a href="#">
-                        <i class="fab fa-twitter">
-                            <span class="tooltips twitter">Twitter</span>
-                        </i>
-                    </a>
-                    <a href="#">
-                        <i class="fab fa-google-plus">
-                            <span class="tooltips google_plus">Google plus</span>
-                        </i>
-                    </a>
-                </div>
-                
-
-                <div class="search_btn">
-                    <img src="img/search_icon.svg" alt="button search">
-                </div>
-            </div>
-
-            <!-- <i class="fas fa-sort-down"></i> -->
-            
-        </div>
-        <div class="header2">
-            <a href="/asonaema" class="contenedor_img_logo">
-                <img src="http://localhost/asonaema/img/logo_prueba.svg" alt="logotipo">
-            </a>
-            
-            <ul class="menu principal">
-                <li><a href="" class="activo enlace_inicio">INICIO</a></li>
-                <li class=" activo enlace_produsctos"><a href="http://localhost/asonaema/tienda">PRODUCTOS</a></li>
-                <li class="enlace_sobre_nosotros"><a href="http://localhost/asonaema/nosotros" >SOBRE NOSOTROS</a></li>
-                <li class="enlace_galeria"><a href="http://localhost/asonaema/galeria">GALERIA</a></li>
-                <li><a href="">MÁS <i class="fas fa-angle-down"></i></a>
-                    <ul class="submenu">
-                        <li><a href="http://localhost/asonaema/galeria" class="mas_galeria">Galeria</a></li>
-                        <li><a href="http://localhost/asonaema/nosotros" class="mas_sobre_nosotros">sobre nosotros</a></li>
-                        <li><a href="http://localhost/asonaema/tienda" class="mas_productos">productos</a></li>
-                        <li><a href=""></a></li>
-                    </ul>
-                </li>
-            </ul>
-            <a href="http://localhost/asonaema/contacto"><button role="button" class="btn-main"><i class="fas fa-envelope"></i> CONTACTO</button></a>
-            
-        </div>
-    </header>
+    <?php
+        require_once 'header.php';
+    ?>
     <div class="menu_scroll">
         <ul class="menu scroll">
             <li><a href="/asonaema" class="activo enlace_inicio">INICIO</a></li>
@@ -105,15 +44,7 @@
             
         </ul>
     </div>
-    <div class="panel_busqueda">
-        <div class="cuadro_busqueda">
-            <input type="text" placeholder="Buscar..." class="input_busqueda" id="input_busqueda">
-            <img src="img/cancel_icon.svg" class="cerrar_busqueda" alt="">
-        </div>
-        <div class="resultado_busqueda">
-            <h3 class="alerta_no_funciona"> <i class="fa fa-exclamation-triangle"></i> El buscador no esta listo todavia estamos trabando en ello.</h3>
-        </div>
-    </div>
+    
 
     <div class="container_carousel">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -237,7 +168,7 @@
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quis libero numquam ex molestiae ipsum 
                 eius repellendus deleniti voluptas atque possimus iste harum sint, est totam cupiditate magni doloremque at?
             </p>
-            <button class="btn_grid_info">Más Información <i class="fas fa-arrow-right"></i></button>
+            <button class="btn_grid_info" id="btn_mas_grid_info1">Más Información <i class="fas fa-arrow-right"></i></button>
         </div>
     </div>
 
@@ -247,7 +178,7 @@
             <p class="text_paralax">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore magni ea aut iste ex est molestias autem, veritatis dolor vel.
             </p>
-            <button class="btn_paralax">Más Información <i class="fas fa-arrow-right"></i></button>
+            <button class="btn_paralax" id="btn_mas_paralax">Más Información <i class="fas fa-arrow-right"></i></button>
         </div>
     </div>
 
@@ -258,7 +189,7 @@
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quis libero numquam ex molestiae ipsum 
                 eius repellendus deleniti voluptas atque possimus iste harum sint, est totam cupiditate magni doloremque at?
             </p>
-            <button class="btn_grid_info">Más Información <i class="fas fa-arrow-right"></i></button>
+            <button class="btn_grid_info" id="btn_mas_grid_info2">Más Información <i class="fas fa-arrow-right"></i></button>
         </div>
 
         <div class="left grid_img">
@@ -278,55 +209,23 @@
             </button>
 
             <div class="carousel__lista">
-                <div class="carousel__elemento">
-                    <img src="img/miembros_avatar1.jpg" class="carousel__img" alt="">
-                    <p class="carousel__miembros_nombre">Dana Lopez</p>
-                </div>
-                <div class="carousel__elemento">
-                    <img src="img/miembros_avatar2.jpg" class="carousel__img" alt="">
-                    <p class="carousel__miembros_nombre">desiree</p>
-                </div>
-                <div class="carousel__elemento">
-                    <img src="img/miembros_avatar3.jpg" class="carousel__img" alt="">
-                    <p class="carousel__miembros_nombre">todd williams</p>
-                </div>
-                <div class="carousel__elemento">
-                    <img src="img/miembros_avatar4.jpg" class="carousel__img" alt="">
-                    <p class="carousel__miembros_nombre">bonnie weaver</p>
-                </div>
-                <div class="carousel__elemento">
-                    <img src="img/miembros_avatar5.jpg" class="carousel__img" alt="">
-                    <p class="carousel__miembros_nombre">Tanya Matthews</p>
-                </div>
-                <div class="carousel__elemento">
-                    <img src="img/miembros_avatar6.jpg" class="carousel__img" alt="">
-                    <p class="carousel__miembros_nombre">Lillie Ruiz</p>
-                </div>
-                <div class="carousel__elemento">
-                    <img src="img/miembros_avatar7.jpg" class="carousel__img" alt="">
-                    <p class="carousel__miembros_nombre">Kevin Andrews</p>
-                </div>
-                <div class="carousel__elemento">
-                    <img src="img/miembros_avatar8.jpg" class="carousel__img" alt="">
-                    <p class="carousel__miembros_nombre">Amelia Mcdonalid</p>
-                </div>
-                <div class="carousel__elemento">
-                    <img src="img/miembros_avatar9.jpg" class="carousel__img" alt="">
-                    <p class="carousel__miembros_nombre">Zoey Butler</p>
-                </div>
-                <div class="carousel__elemento">
-                    <img src="img/miembros_avatar10.jpg" class="carousel__img" alt="">
-                    <p class="carousel__miembros_nombre">Sarah Gilbert</p>
-                </div>
-                <div class="carousel__elemento">
-                    <img src="img/miembros_avatar11.jpg" class="carousel__img" alt="">
-                    <p class="carousel__miembros_nombre">Glenda Hunt</p>
-                </div>
-                <div class="carousel__elemento">
-                    <img src="img/miembros_avatar12.jpg" class="carousel__img" alt="">
-                    <p class="carousel__miembros_nombre">Mary Wagner</p>
-                </div>
+                <?php
+                    require_once 'model/conexion.php';
+
+                    $resul_comite = $db -> Query("SELECT * FROM `miembros_comite`");
+                    $item_carousel_comite = "";
+
+                    while($row = mysqli_fetch_array($resul_comite)){
+                        $item_carousel_comite .= "<div class='carousel__elemento'>";
+                        $item_carousel_comite .= "<img src=".$row['foto_miem']." class='carousel__img alt=''>";
+                        $item_carousel_comite .= "<p class='carousel__miembros_nombre'>".$row['nombre_miem']." ".$row['apellido_miem']."</p>";
+                        $item_carousel_comite .= "</div>";
+
+                    }
+
+                    echo($item_carousel_comite);
                 
+                ?>                
             </div>
 
             <div role="tablist" class="carousel__indicadores"></div>
@@ -334,21 +233,6 @@
     </div>
 
       
-
-    <!-- <div class="overlay">
-        <div class="main_newsletter">
-            <div class="header_news">
-                <h3>Suscribete</h3>
-                <p>¡Para estar al tanto de todos nuestros productos!</p>
-            </div>
-            <div class="body_news">
-                <form action="">
-                    <input type="text" name="correo_electonico" placeholder="Correo electronico">
-                    <input type="submit" value="Suscribirse" role="button">
-                </form>
-            </div>
-        </div>
-    </div> -->
 
     <div class="overlay mas_info">
         <div class="mas_info_que_es_un_emprendedor">
@@ -485,9 +369,66 @@
                 <h5>¿Está listo para superar estos retos?</h5>
             </div>
         </div>
-        <div class="mas_info_grid_info1"></div>
-        <div class="mas_info_grid_info2"></div>
-        <div class="mas_info_paralax"></div>
+        <div class="mas_info_grid_info1">
+            <i class="cerrar_mas_info fas fa-times"></i>
+            <img src="img/img_grid_info1.svg" class="mas_info_img_que_es_un_emprendedor" alt="">
+            <h2 class="mas_info_title_que_es_un_emprendedor">Lorem ipsum dolor sit amet.</h2>
+            <div class="mas_info_text_que_es_un_emprendedor">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quis libero numquam ex molestiae ipsum eius
+                    repellendus deleniti voluptas atque possimus iste harum sint, est totam cupiditate magni doloremque at?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quis libero numquam ex molestiae ipsum eius
+                    repellendus deleniti voluptas atque possimus iste harum sint, est totam cupiditate magni doloremque at?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quis libero numquam ex molestiae ipsum eius
+                    repellendus deleniti voluptas atque possimus iste harum sint, est totam cupiditate magni doloremque at?
+                </p>
+            </div>
+
+        </div>
+        <div class="mas_info_grid_info2">
+            <i class="cerrar_mas_info fas fa-times"></i>
+            <img src="img/img_grid_info2.svg" class="mas_info_img_que_es_un_emprendedor" alt="">
+            <h2 class="mas_info_title_que_es_un_emprendedor">Retos que debe superar un emprendedor</h2>
+            <div class="mas_info_text_que_es_un_emprendedor">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quis libero numquam ex molestiae ipsum eius
+                    repellendus deleniti voluptas atque possimus iste harum sint, est totam cupiditate magni doloremque at?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quis libero numquam ex molestiae ipsum eius
+                    repellendus deleniti voluptas atque possimus iste harum sint, est totam cupiditate magni doloremque at?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quis libero numquam ex molestiae ipsum eius
+                    repellendus deleniti voluptas atque possimus iste harum sint, est totam cupiditate magni doloremque at?
+                </p>
+            </div>
+
+        </div>
+        <div class="mas_info_paralax">
+            <i class="cerrar_mas_info fas fa-times"></i>
+            <h2 class="mas_info_title_que_es_un_emprendedor">Lorem ipsum dolor sit amet.</h2>
+            <div class="mas_info_text_que_es_un_emprendedor">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quis libero numquam ex molestiae ipsum eius
+                    repellendus deleniti voluptas atque possimus iste harum sint, est totam cupiditate magni doloremque at?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quis libero numquam ex molestiae ipsum eius
+                    repellendus deleniti voluptas atque possimus iste harum sint, est totam cupiditate magni doloremque at?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quis libero numquam ex molestiae ipsum eius
+                    repellendus deleniti voluptas atque possimus iste harum sint, est totam cupiditate magni doloremque at?
+                </p>
+            </div>
+
+
+        </div>
     </div>
 
 

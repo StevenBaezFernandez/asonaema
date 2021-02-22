@@ -1,5 +1,7 @@
 <?php
 
+    
+
     if(!empty($_GET['url'])){
             if($_GET['url'] == '/'){
                 $url = 'home';    
