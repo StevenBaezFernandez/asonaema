@@ -56,6 +56,7 @@
         <div class="cover_banner_nosotros">
         </div>
     </div>
+    
     <div class="valores_mision_vision_container">
         <h2 class="nosotros_main_title">Nosotros</h2>
 

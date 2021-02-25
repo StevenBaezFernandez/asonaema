@@ -52,6 +52,21 @@
         </div>
     </div>
 
+    <h1 style="text-align: center">Show Instagram Feed on your Website</h1>
+    <div id="instafeed-container"></div>
+
+
+
+	<script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+	<script type="text/javascript">
+	var userFeed = new Instafeed({
+		get: 'asonaema',
+		target: "instafeed-container",
+    	resolution: 'low_resolution',
+		accessToken: '32c93e3b69575fb359addc0e996ea86b'
+	});
+	userFeed.run();
+
     <div class="overlay">
         <div class="main_newsletter">
             <div class="header_news">

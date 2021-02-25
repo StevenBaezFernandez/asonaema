@@ -136,9 +136,10 @@ cuadro_busqueda.addEventListener("keyup",()=>{
 });
 
 
-// function focus(){
-//     document.getElementById("input_busqueda").focus();
-// }
+function focus(){
+    document.getElementById("cuadro_busqueda").focus();
+    document.getElementById("cuadro_busqueda").value = '';
+}
 
 function toggle(objeto, clase){
     objeto.classList.toggle(clase);
@@ -146,7 +147,10 @@ function toggle(objeto, clase){
 
 search_btn.addEventListener('click', function(){
     toggle(panel_busqueda, 'active');
-
+    focus();
+    title_resultado_busqueda.innerHTML = ``;
+    img_searching_buscador.classList.add('active');
+    grid_product_resul_busqueda.innerHTML = ``;
     setTimeout(function(){
         focus();
     },100);

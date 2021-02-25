@@ -116,7 +116,7 @@
         <div class="sub_container_producto">
             <div class="info_producto">
                 <div class="indicador_ruta_producto">
-                    <span class="indicador_ruta_enlace"><a href="http://localhost/asonaema/tienda">Tienda </a> <span> / Producto  </span><span>/ <?php echo($array_resul_producto['id_prod']);?></span></span>
+                    <span class="indicador_ruta_enlace"><a href="http://localhost/asonaema/tienda">Tienda >&nbsp;</a> <a href=""> producto > &nbsp;</a><a href=""><?php echo($array_resul_producto['id_prod']);?></a></span>
                 </div>
                 <h1 class="title_producto"><?php echo($array_resul_producto['nombre_prod']);?></h1>
                 <p class="descripcion_producto">
