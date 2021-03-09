@@ -53,56 +53,32 @@
               <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
               <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
               <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"></li>
-              <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"></li>
-              <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"></li>
-              <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"></li>
     
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="img/img1.jpg" class="d-block w-100" alt="...">
+                <img src="img/img1.jpg" loading="lazy" class="d-block w-100" alt="...">
                 <div class="carousel-caption carousel_caption_home_home">
                   <h5>First slide label</h5>
                   <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="img/img2.jpg" class="d-block w-100" alt="...">
+                <img src="img/img2.jpg" loading="lazy" class="d-block w-100" alt="...">
                 <div class="carousel-caption carousel_caption_home_home">
                   <h5>Second slide label</h5>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="img/img3.jpg" class="d-block w-100" alt="...">
+                <img src="img/img3.jpg" loading="lazy" class="d-block w-100" alt="...">
                 <div class="carousel-caption carousel_caption_home_home">
                   <h5>Third slide label</h5>
                   <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="img/img4.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption carousel_caption_home_home">
-                  <h5>Third slide label</h5>
-                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="img/img5.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption carousel_caption_home_home">
-                  <h5>Third slide label</h5>
-                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="img/img6.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption carousel_caption_home_home">
-                  <h5>Third slide label</h5>
-                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="img/img7.jpg" class="d-block w-100" alt="...">
+                <img src="img/img4.jpg" loading="lazy" class="d-block w-100" alt="...">
                 <div class="carousel-caption carousel_caption_home_home">
                   <h5>Third slide label</h5>
                   <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -128,7 +104,7 @@
         <div id="particles-js"></div> 
         
         <div class="column_info">
-            <img src="http://localhost/asonaema/img/emprendedor.svg" class="column_info_imgtop" alt="">
+            <img src="http://localhost/asonaema/img/emprendedor.svg" loading="lazy" class="column_info_imgtop" alt="">
             <h2 class="column_info_title">¿Que es un emprendedor?</h2>
             <p class="column_info_text">
                 Un emprendedor es una persona que tiene la capacidad de descubrir e identificar algún tipo de oportunidad 
@@ -137,7 +113,7 @@
             <button class="column_info_button" id="btn_mas_info_que_es_un_emprendedor">Más Información <i class="fas fa-arrow-right"></i></button>
         </div>
         <div class="column_info">
-            <img src="http://localhost/asonaema/img/caracteristicas_emprendedor.svg" class="column_info_imgtop" alt="">
+            <img src="http://localhost/asonaema/img/caracteristicas_emprendedor.svg" loading="lazy" class="column_info_imgtop" alt="">
             <h2 class="column_info_title">Característica de un emprendedor</h2>
             <p class="column_info_text">
                 Emprender exige mucho esfuerzo y trabajo, incertidumbre, miedos al cambio, ambición y vivir fuera de la zona 
@@ -147,7 +123,7 @@
             <button class="column_info_button" id="btn_mas_info_caracteristicas_emprendedor">Más Información <i class="fas fa-arrow-right"></i></button>
         </div>
         <div class="column_info">
-            <img src="http://localhost/asonaema/img/retos_emprendedor.svg" class="column_info_imgtop" alt="">
+            <img src="http://localhost/asonaema/img/retos_emprendedor.svg" loading="lazy" class="column_info_imgtop" alt="">
             <h2 class="column_info_title">Retos que debe superar un emprendedor</h2>
             <p class="column_info_text">
                 Conseguir la libertad financiera con una idea de negocio es un asunto que pone de cabeza a más de un emprendedor; 
@@ -160,7 +136,7 @@
     
     <div class="grid_info" id="grid_info1">
         <div class="left grid_img">
-            <img src="img/img_grid_info1.svg" alt="img_grid_info1.svg">
+            <img src="img/img_grid_info1.svg" loading="lazy" alt="img_grid_info1.svg">
         </div>
         <div class="right grid_text">
             <h3 class="grid_text_title">Lorem ipsum dolor sit amet.</h3>
@@ -172,7 +148,7 @@
         </div>
     </div>
 
-    <div class="paralax" id="main_paralax">
+    <div class="paralax" id="main_paralax" loading="lazy">
         <div class="cover_paralax">
             <h2 class="title_paralax">Lorem ipsum dolor sit amet.</h2>
             <p class="text_paralax">
@@ -193,7 +169,7 @@
         </div>
 
         <div class="left grid_img">
-            <img src="img/img_grid_info2.svg" alt="img_grid_info1.svg">
+            <img src="img/img_grid_info2.svg" loading="lazy" alt="img_grid_info1.svg">
         </div>
     </div>
 
@@ -217,7 +193,7 @@
 
                     while($row = mysqli_fetch_array($resul_comite)){
                         $item_carousel_comite .= "<div class='carousel__elemento'>";
-                        $item_carousel_comite .= "<img src=".$row['foto_miem']." class='carousel__img alt=''>";
+                        $item_carousel_comite .= "<img src=".$row['foto_miem']." loading='lazy' class='carousel__img alt=''>";
                         $item_carousel_comite .= "<p class='carousel__miembros_nombre'>".$row['nombre_miem']." ".$row['apellido_miem']."</p>";
                         $item_carousel_comite .= "</div>";
 
@@ -237,7 +213,7 @@
     <div class="overlay mas_info">
         <div class="mas_info_que_es_un_emprendedor">
             <i class="cerrar_mas_info fas fa-times"></i>
-            <img src="http://localhost/asonaema/img/emprendedor.svg" class="mas_info_img_que_es_un_emprendedor" alt="">
+            <img src="http://localhost/asonaema/img/emprendedor.svg" loading="lazy" class="mas_info_img_que_es_un_emprendedor" alt="">
             <h2 class="mas_info_title_que_es_un_emprendedor">¿Que es un emprendedor?</h2>
             <div class="mas_info_text_que_es_un_emprendedor">
                 <p>
@@ -283,7 +259,7 @@
         </div>
         <div class="mas_info_caracteristicas_emprendedor">
             <i class="cerrar_mas_info fas fa-times"></i>
-            <img src="http://localhost/asonaema/img/caracteristicas_emprendedor.svg" class="mas_info_img_que_es_un_emprendedor" alt="">
+            <img src="http://localhost/asonaema/img/caracteristicas_emprendedor.svg" loading="lazy" class="mas_info_img_que_es_un_emprendedor" alt="">
             <h2 class="mas_info_title_que_es_un_emprendedor">Característica de un emprendedor</h2>
             <div class="mas_info_text_que_es_un_emprendedor">
                 <p>
@@ -326,7 +302,7 @@
         </div>
         <div class="mas_info_retos_emprendedor">
             <i class="cerrar_mas_info fas fa-times"></i>
-            <img src="http://localhost/asonaema/img/retos_emprendedor.svg" class="mas_info_img_que_es_un_emprendedor" alt="">
+            <img src="http://localhost/asonaema/img/retos_emprendedor.svg" loading="lazy" class="mas_info_img_que_es_un_emprendedor" alt="">
             <h2 class="mas_info_title_que_es_un_emprendedor">Retos que debe superar un emprendedor</h2>
             <div class="mas_info_text_que_es_un_emprendedor">
                 <p>
@@ -371,7 +347,7 @@
         </div>
         <div class="mas_info_grid_info1">
             <i class="cerrar_mas_info fas fa-times"></i>
-            <img src="img/img_grid_info1.svg" class="mas_info_img_que_es_un_emprendedor" alt="">
+            <img src="img/img_grid_info1.svg" loading="lazy" class="mas_info_img_que_es_un_emprendedor" alt="">
             <h2 class="mas_info_title_que_es_un_emprendedor">Lorem ipsum dolor sit amet.</h2>
             <div class="mas_info_text_que_es_un_emprendedor">
                 <p>
@@ -391,7 +367,7 @@
         </div>
         <div class="mas_info_grid_info2">
             <i class="cerrar_mas_info fas fa-times"></i>
-            <img src="img/img_grid_info2.svg" class="mas_info_img_que_es_un_emprendedor" alt="">
+            <img src="img/img_grid_info2.svg" loading="lazy" class="mas_info_img_que_es_un_emprendedor" alt="">
             <h2 class="mas_info_title_que_es_un_emprendedor">Retos que debe superar un emprendedor</h2>
             <div class="mas_info_text_que_es_un_emprendedor">
                 <p>
@@ -432,7 +408,7 @@
     </div>
 
 
-    <script id="dsq-count-scr" src="//dilorenst-1.disqus.com/count.js" async></script>
+    <script id="dsq-count-scr" src="//dilorenst-1.disqus.com/count.js" loading="lazy" async></script>
     <div id="disqus_thread"></div>
     <script>
 

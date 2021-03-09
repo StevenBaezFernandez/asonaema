@@ -48,36 +48,104 @@ const cerrar_mas_info = document.querySelectorAll(".cerrar_mas_info");
 const header1_menu_social_social_i = document.querySelectorAll(".header1 .menu_social .social a");
 const header1_menu_social_social_i_tooltips = document.querySelectorAll(".header1 .menu_social .social i .tooltips");
 
+let contacto_form = document.querySelector("#contacto_form");
+let nombre = document.querySelector("#nombre");
+let correo = document.querySelector("#correo");
+let motivo = document.querySelector("#motivo");
+let mensaje = document.querySelector("#mensaje");
+let form_btn_send = document.querySelector("#form_btn_send");
+
+let mensaje_respuesta = document.querySelector(".mensaje_respuesta");
+let lds_ring = document.querySelector(".lds-ring");
+
+const expresiones = {
+	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+}
+
+const campos = {
+    nombre: false,
+    correo: false,
+    mensaje: false
+}
+
+
+
+const validarFormulario = (e)=>{
+    switch(e.target.id){
+        case "nombre":
+            validacion(expresiones.nombre, e.target);
+        break;
+
+        case "correo":
+            validacion(expresiones.correo, e.target);
+        break;
+
+        case "mensaje":
+            if(e.target.value !== ''){
+                document.querySelector(`.fa-check-circle_mensaje`).classList.add('active');
+                document.querySelector(`.fa-times-circle_mensaje`).classList.remove('active');
+                campos.mensaje = true;
+            }else{
+                document.querySelector(`.fa-check-circle_mensaje`).classList.remove('active');
+                document.querySelector(`.fa-times-circle_mensaje`).classList.add('active');
+                campos.mensaje = false;
+            }
+        break;
+    }
+}
+
+const validacion = (expresion, campo)=>{
+    if(expresion.test(campo.value)){
+        document.querySelector(`.fa-check-circle_${campo.id}`).classList.add('active');
+        document.querySelector(`.fa-times-circle_${campo.id}`).classList.remove('active');
+        
+        if(campo.id == 'nombre'){
+            campos.nombre = true;
+        }else if(campo.id == 'correo'){
+            campos.correo = true;
+        }
+    }else{
+        document.querySelector(`.fa-check-circle_${campo.id}`).classList.remove('active');
+        document.querySelector(`.fa-times-circle_${campo.id}`).classList.add('active');
+
+        if(campo.id == 'nombre'){
+            campos.nombre = false;
+        }else if(campo.id == 'correo'){
+            campos.correo = false;
+        }
+    }
+}
+
+
+document.querySelectorAll("#contacto_form input, #contacto_form textarea").forEach((campo)=>{
+    campo.addEventListener("keyup", validarFormulario);
+    campo.addEventListener("blur", validarFormulario);
+});
 
 const httpRequest = new XMLHttpRequest();
 
 
 
 
+setInterval(() => {
+    if(blanco){
 
-window.addEventListener("load", ()=>{
-    setInterval(() => {
-        if(blanco){
+        blanco.classList.add("active");
+    }
+    if(info_img1 && info_img2 && info_img3){
+        
+        info_img1.classList.add("active");
+        info_img2.classList.add("active");
+        info_img3.classList.add("active");
+        
+    }
+    if(info_container){
+        info_container.classList.add("active");
+    }
+}, 1000);
 
-            blanco.classList.add("active");
-        }
-        if(info_img1 && info_img2 && info_img3){
-            
-            info_img1.classList.add("active");
-            info_img2.classList.add("active");
-            info_img3.classList.add("active");
-            
-        }
-        if(info_container){
-            info_container.classList.add("active");
-        }
-    }, 50);
 
-    // setInterval(() => {
-    //     overlay.classList.add("active");
-    // }, 3000);
-    
-});
 
 cuadro_busqueda.addEventListener("keyup",()=>{
     httpRequest.open("POST", "http://localhost/asonaema/get_product_api.php", true);
@@ -134,6 +202,69 @@ cuadro_busqueda.addEventListener("keyup",()=>{
     }
 
 });
+
+
+if(contacto_form){
+    // contacto_form.addEventListener("submit", (e)=>{
+        //     e.preventDefault();        
+        // });
+        
+    document.querySelector(".mensaje_respuesta i").addEventListener("click", ()=>{
+        mensaje_respuesta.classList.remove('active');
+    });
+    
+    
+    form_btn_send.addEventListener("click", (e)=>{
+        e.preventDefault();
+        
+        if(campos.nombre && campos.correo && campos.mensaje){
+
+            lds_ring.classList.add('active');
+            console.log(lds_ring);
+            document.querySelector
+            httpRequest.open("POST", "http://localhost/asonaema/email.php", true);
+            httpRequest.setRequestHeader("Content-Type","application/x-WWW-form-urlencoded");
+            httpRequest.send("nombre="+nombre.value+"&correo="+correo.value+"&motivo="+motivo.value+"&mensaje="+mensaje.value);
+    
+            console.log("nombre="+nombre.value+"&correo="+correo.value+"&motivo="+motivo.value+"&mensaje="+mensaje.value);
+            httpRequest.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    let respuesta = this.responseText; 
+                    
+                    if(respuesta == 'Message has been sent'){
+                        console.log(this.responseText);
+                        nombre.value = "";
+                        correo.value = "";
+                        mensaje.value = "";
+    
+                        html.scrollTop = 0;
+                        
+                        mensaje_respuesta.classList.add('active');
+                        document.querySelector(`.mensaje_error_form`).classList.remove('active');
+                        
+                        
+                        document.querySelectorAll(`.fa-check-circle`).forEach((element)=>{
+                            element.classList.remove('active');
+                        })
+                        
+                        setTimeout(()=>{
+                            lds_ring.classList.remove('active');
+        
+                        },2000)
+                        
+                    }
+                }
+    
+            }
+        }else{
+            document.querySelector(`.mensaje_error_form`).classList.add('active');
+        }
+
+
+    });
+
+}
+
 
 
 function focus(){

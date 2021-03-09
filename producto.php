@@ -32,13 +32,13 @@
         $productos_vend .= "<a href='http://localhost/asonaema/tienda/producto/".$row['id_prod']."'>";
         $productos_vend .= "<div class='carousel_tienda_home_elemento carousel_vend_recomendados'>";
         $productos_vend .= "<div class='header_img_card'>";
-        $productos_vend .= "<img src='".$row['img_prod']."' class='carousel_tienda_home_img' alt=''>";
+        $productos_vend .= "<img src='".$row['img_prod']."' loading='lazy' class='carousel_tienda_home_img' alt=''>";
         $productos_vend .= "</div>";
         $productos_vend .= "<div class='body_elemento_tienda_home'>";
         $productos_vend .= "<h3 class='elemento_tienda_home_title' title='".$row['nombre_prod']."'>".$row['nombre_prod']."</h3>";
         $productos_vend .= "<p class='elemento_tienda_home_text'>".$row['descripcion_prod']."</p>";
         $productos_vend .= "<div class='container_vendedor_y_precio'>";
-        $productos_vend .= "<img src='".$row['logo_marca']."' alt=''>";
+        $productos_vend .= "<img src='".$row['logo_marca']."' loading='lazy' alt=''>";
         $productos_vend .= "<span class='precio_producto'>RD $".$row['precio_prod']."</span>";
         $productos_vend .= "</div>";
         $productos_vend .= "</div>";
@@ -101,7 +101,7 @@
     <div class="panel_busqueda">
         <div class="cuadro_busqueda">
             <input type="text" placeholder="Buscar..." class="input_busqueda" id="input_busqueda">
-            <img src="http://localhost/asonaema/img/cancel_icon.svg" class="cerrar_busqueda" alt="">
+            <img src="http://localhost/asonaema/img/cancel_icon.svg" loading='lazy' class="cerrar_busqueda" alt="">
         </div>
         <div class="resultado_busqueda">
             <h3 class="alerta_no_funciona"> <i class="fa fa-exclamation-triangle"></i> El buscador no esta listo todavia estamos trabando en ello.</h3>
@@ -116,7 +116,7 @@
         <div class="sub_container_producto">
             <div class="info_producto">
                 <div class="indicador_ruta_producto">
-                    <span class="indicador_ruta_enlace"><a href="http://localhost/asonaema/tienda">Tienda >&nbsp;</a> <a href=""> producto > &nbsp;</a><a href=""><?php echo($array_resul_producto['id_prod']);?></a></span>
+                    <span class="indicador_ruta_enlace"><a href="https://web-asonaema.000webhostapp.com/tienda">Tienda </a> <span> / Producto  </span><span>/ 60255b8635111</span></span>
                 </div>
                 <h1 class="title_producto"><?php echo($array_resul_producto['nombre_prod']);?></h1>
                 <p class="descripcion_producto">
@@ -138,7 +138,7 @@
             </div>
             <div class="img_producto">
                 <div class="container_img_producto">
-                    <img src="<?php echo($array_resul_producto['img_prod']);?>" alt="">
+                    <img src="<?php echo($array_resul_producto['img_prod']);?>" loading="lazy" alt="">
                 </div>
             </div>
         </div>

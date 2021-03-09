@@ -56,6 +56,7 @@
         <p class="paralax_contact_text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores atque, quae ipsa cupiditate recusandae dicta itaque.
         </p>
+        <div class="mensaje_respuesta"><p>Mensaje enviado correctamente!</p><i class="fas fa-times"></i></div>
     </div>
 
     <div class="form_contact_container">
@@ -73,29 +74,39 @@
         <div class="form_contact">
             <h3 class="form_contact_title">Contáctanos</h3>
             <p class="form_contact_text">Los campos marcados con <span class="campo_requerido">*</span> son obligatorios</p>
-            <form action="">
+            <form id="contacto_form">
+                <label for="nombre">Nombres <span class="campo_requerido">*</span></label>
                 <div class="input_group_contact">
-                    <label for="nombre">Nombres <span class="campo_requerido">*</span></label>
+                    <i class="fas fa-check-circle fa-check-circle_nombre "></i>
+                    <i class="fas fa-times-circle fa-times-circle_nombre"></i>
                     <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
                 </div>
+                <label for="correo">Correo electronico <span class="campo_requerido">*</span></label>
                 <div class="input_group_contact">
-                    <label for="correo">Correo electronico <span class="campo_requerido">*</span></label>
+                    <i class="fas fa-check-circle fa-check-circle_correo"></i>
+                    <i class="fas fa-times-circle fa-times-circle_correo"></i>
                     <input type="email" name="correo" id="correo" placeholder="Correo electronico" required>
                 </div>
+                <label for="motivo">Elige un motivo <span class="campo_requerido">*</span></label>
                 <div class="input_group_contact">
-                    <label for="motivo">Elige un motivo <span class="campo_requerido">*</span></label>
                     <select name="motivo" id="motivo" required>
                         <option value="duda" selected>Alguna duda</option>
-                        <option value="duda">Formar parte de nosotros</option>
-                        <option value="duda">Compra</option>
-                        <option value="duda">Otro</option>
+                        <option value="formar parte">Formar parte de nosotros</option>
+                        <option value="compra">Compra</option>
+                        <option value="otro">Otro</option>
                     </select>
                 </div>
+                <label for="mensaje">Escribe tu mensaje aqui <span class="campo_requerido">*</span></label>
                 <div class="input_group_contact">
-                    <label for="mensaje">Escribe tu mensaje aqui <span class="campo_requerido">*</span></label>
+                    <i class="fas fa-check-circle fa-check-circle_mensaje"></i>
+                    <i class="fas fa-times-circle fa-times-circle_mensaje"></i>
                     <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje" required></textarea>
                 </div>
-                <button type="submit" class="form_btn_send">Enviar <i class="fas fa-paper-plane"></i></button>
+                <div class="contenedor_btn_loading">
+                    <button type="submit" class="form_btn_send" id="form_btn_send">Enviar <i class="fas fa-paper-plane"></i></button>
+                    <p class="mensaje_error_form">Todos los campos deben estar correctos</p>
+                    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+                </div>
             </form>
         </div>
     </div>

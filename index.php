@@ -36,14 +36,34 @@
         }
         elseif($arr_url[0] == 'galeria'){
             require_once 'galeria.php';
-        }else{
+        }
+        else{
             require_once '404.html';
         }
     }elseif($cantidad_elementos_url_json == 2){
         if($arr_url[0] == 'tienda' && $arr_url[1] == 'categoria'){
             header('location: http://localhost/asonaema/tienda');
-        }elseif($arr_url[0] == 'tienda' && $arr_url[1] == 'producto'){
+        }
+        elseif($arr_url[0] == 'tienda' && $arr_url[1] == 'producto'){
             header('location: http://localhost/asonaema/tienda');
+        }
+        elseif($arr_url[0] == 'admin' && $arr_url[1] ==''){
+            require_once 'admin_files/home.admin.php';            
+        }
+        elseif($arr_url[0] == 'admin' && $arr_url[1] =='productos'){
+            require_once 'admin_files/productos.admin.php';            
+        }
+        elseif($arr_url[0] == 'admin' && $arr_url[1] =='categorias'){
+            require_once 'admin_files/categorias.admin.php';            
+        }
+        elseif($arr_url[0] == 'admin' && $arr_url[1] =='carousels'){
+            require_once 'admin_files/carousels.admin.php';            
+        }
+        elseif($arr_url[0] == 'admin' && $arr_url[1] =='vendedores'){
+            require_once 'admin_files/vendedores.admin.php';            
+        }
+        elseif($arr_url[0] == 'admin' && $arr_url[1] =='comite'){
+            require_once 'admin_files/comite.admin.php';            
         }
     }
     elseif($cantidad_elementos_url_json == 3){
@@ -55,9 +75,9 @@
     }
 
 
-    $id = uniqid();
+    // $id = uniqid();
 
-    echo ($id);
+    // echo ($id);
     
    
 

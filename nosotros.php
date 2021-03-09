@@ -62,7 +62,7 @@
 
         <div class="sub_container_valor_mision_vision" id="sub_container_valor_mision_vision">
             <div class="mision" id="mision">
-                <img src="img/mission.svg" class="mision_img" alt="">
+                <img src="img/mission.svg" loading="lazy" class="mision_img" alt="">
                 <h2 class="mision_title">Misión</h2>
                 <p class="mision_text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, ratione corrupti. Vero, praesentium. 
@@ -71,7 +71,7 @@
                 </p>
             </div>
             <div class="valores" id="valores">
-                <img src="img/value.svg" class="valores_img" alt="">
+                <img src="img/value.svg" loading="lazy" class="valores_img" alt="">
                 <h2 class="valores_title">Valores</h2>
                 <ul class="lista_valores">
                     <li><span class="number_item_valor">1</span> Lorem ipsum dolor sit amet.</li>
@@ -82,7 +82,7 @@
                 </ul>
             </div>
             <div class="vision" id="vision">
-                <img src="img/vision.svg" class="vision_img" alt="">
+                <img src="img/vision.svg" loading="lazy" class="vision_img" alt="">
                 <h2 class="vision_title">Visión</h2>
                 <p class="vision_text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, ratione corrupti. Vero, praesentium. 
@@ -95,7 +95,7 @@
 
     <div class="organigrama_container">
         <h1 class="organigrama_title">Nuestro organigrama</h1>
-        <img src="img/organigrama.jpg" alt="">
+        <img src="img/organigrama.jpg" loading="lazy" alt="">
     </div>
 
 
@@ -111,7 +111,7 @@
             <button class="quienes_btn"> Más información <i class="fas fa-arrow-right"></i></button>
         </div>
         <div class="img_quienes">
-            <img src="img/quienes_img.jpg" alt="">
+            <img src="img/quienes_img.jpg" loading="lazy" alt="">
         </div>
     </div>
 

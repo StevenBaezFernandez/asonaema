@@ -28,7 +28,7 @@
 
 
 
-        $home_tienda .= "<img src='http://localhost/asonaema/img/bg_carousel_tienda_home.jpg' class='d-block w-100' alt='...'>";
+        $home_tienda .= "<img src='http://localhost/asonaema/img/bg_carousel_tienda_home.jpg' loading='lazy' class='d-block w-100' alt='...'>";
         $home_tienda .= "<div class='carousel-caption carousel_caption_tieda_home'>";
         $home_tienda .= "<div class='caption_child caption_child1'>";
         $home_tienda .= "<h2 class='title_carousel_pruct_tienda_home'>".$row['nombre_prod']."</h2>";
@@ -36,7 +36,7 @@
         $home_tienda .= "<a href='http://localhost/asonaema/tienda/producto/".$row['id_prod']."' class='btn_ver_producto_carousel'>Ver Producto <i class='fas fa-eye'></i></a>";
         $home_tienda .= "</div>";
         $home_tienda .= "<div class='caption_child caption_child2'>";
-        $home_tienda .= "<img src='".$row['img_prod']."' alt=''>";
+        $home_tienda .= "<img src='".$row['img_prod']."' loading='lazy'  alt=''>";
         $home_tienda .= "</div>";
         $home_tienda .= "</div>";
         $home_tienda .= "</div>";
@@ -48,13 +48,13 @@
         $capilares_recomendados .= "<a href='http://localhost/asonaema/tienda/producto/".$row['id_prod']."'>";
         $capilares_recomendados .= "<div class='carousel_tienda_home_elemento'>";
         $capilares_recomendados .= "<div class='header_img_card'>";
-        $capilares_recomendados .= "<img src='".$row['img_prod']."' class='carousel_tienda_home_img' alt=''>";
+        $capilares_recomendados .= "<img src='".$row['img_prod']."' loading='lazy' class='carousel_tienda_home_img' alt=''>";
         $capilares_recomendados .= "</div>";
         $capilares_recomendados .= "<div class='body_elemento_tienda_home'>";
         $capilares_recomendados .= "<h3 class='elemento_tienda_home_title' title='".$row['nombre_prod']."'>".$row['nombre_prod']."</h3>";
         $capilares_recomendados .= "<p class='elemento_tienda_home_text'>".$row['descripcion_prod']."</p>";
         $capilares_recomendados .= "<div class='container_vendedor_y_precio'>";
-        $capilares_recomendados .= "<img src='".$row['logo_marca']."' alt=''>";
+        $capilares_recomendados .= "<img src='".$row['logo_marca']."' loading='lazy' alt=''>";
         $capilares_recomendados .= "<span class='precio_producto'>RD $".$row['precio_prod']."</span>";
         $capilares_recomendados .= "</div>";
         $capilares_recomendados .= "</div>";
@@ -65,13 +65,13 @@
         $piel_recomendados .= "<a href='http://localhost/asonaema/tienda/producto/".$row['id_prod']."'>";
         $piel_recomendados .= "<div class='carousel_tienda_home_elemento'>";
         $piel_recomendados .= "<div class='header_img_card'>";
-        $piel_recomendados .= "<img src='".$row['img_prod']."' class='carousel_tienda_home_img' alt=''>";
+        $piel_recomendados .= "<img src='".$row['img_prod']."' loading='lazy' class='carousel_tienda_home_img' alt=''>";
         $piel_recomendados .= "</div>";
         $piel_recomendados .= "<div class='body_elemento_tienda_home'>";
         $piel_recomendados .= "<h3 class='elemento_tienda_home_title' title='".$row['nombre_prod']."'>".$row['nombre_prod']."</h3>";
         $piel_recomendados .= "<p class='elemento_tienda_home_text'>".$row['descripcion_prod']."</p>";
         $piel_recomendados .= "<div class='container_vendedor_y_precio'>";
-        $piel_recomendados .= "<img src='".$row['logo_marca']."' alt=''>";
+        $piel_recomendados .= "<img src='".$row['logo_marca']."' loading='lazy' alt=''>";
         $piel_recomendados .= "<span class='precio_producto'>RD $".$row['precio_prod']."</span>";
         $piel_recomendados .= "</div>";
         $piel_recomendados .= "</div>";
@@ -82,13 +82,13 @@
         $bisuteria_recomendados .= "<a href='http://localhost/asonaema/tienda/producto/".$row['id_prod']."'>";
         $bisuteria_recomendados .= "<div class='carousel_tienda_home_elemento'>";
         $bisuteria_recomendados .= "<div class='header_img_card'>";
-        $bisuteria_recomendados .= "<img src='".$row['img_prod']."' class='carousel_tienda_home_img' alt=''>";
+        $bisuteria_recomendados .= "<img src='".$row['img_prod']."' loading='lazy' class='carousel_tienda_home_img' alt=''>";
         $bisuteria_recomendados .= "</div>";
         $bisuteria_recomendados .= "<div class='body_elemento_tienda_home'>";
         $bisuteria_recomendados .= "<h3 class='elemento_tienda_home_title' title='".$row['nombre_prod']."'>".$row['nombre_prod']."</h3>";
         $bisuteria_recomendados .= "<p class='elemento_tienda_home_text'>".$row['descripcion_prod']."</p>";
         $bisuteria_recomendados .= "<div class='container_vendedor_y_precio'>";
-        $bisuteria_recomendados .= "<img src='".$row['logo_marca']."' alt=''>";
+        $bisuteria_recomendados .= "<img src='".$row['logo_marca']."' loading='lazy' alt=''>";
         $bisuteria_recomendados .= "<span class='precio_producto'>RD $".$row['precio_prod']."</span>";
         $bisuteria_recomendados .= "</div>";
         $bisuteria_recomendados .= "</div>";
@@ -150,7 +150,7 @@
     <div class="panel_busqueda">
         <div class="cuadro_busqueda">
             <input type="text" placeholder="Buscar..." class="input_busqueda" id="input_busqueda">
-            <img src="http://localhost/asonaema/img/cancel_icon.svg" class="cerrar_busqueda" alt="">
+            <img src="http://localhost/asonaema/img/cancel_icon.svg" loading='lazy' class="cerrar_busqueda" alt="">
         </div>
         <div class="resultado_busqueda">
             <h3 class="alerta_no_funciona"> <i class="fa fa-exclamation-triangle"></i> El buscador no esta listo todavia estamos trabando en ello.</h3>
