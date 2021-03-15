@@ -22,12 +22,14 @@ const blanco = document.querySelector(".blanco");
 const column_info_container = document.querySelector(".column_info_container");
 const grid_info1 = document.querySelectorAll("#grid_info1");
 const grid_info2 = document.querySelectorAll("#grid_info2");
-const btn_mas_info_que_es_un_emprendedor = document.querySelector("#btn_mas_info_que_es_un_emprendedor");
-const btn_mas_info_caracteristicas_emprendedor = document.querySelector("#btn_mas_info_caracteristicas_emprendedor");
-const btn_mas_info_retos_emprededor = document.querySelector("#btn_mas_info_retos_emprededor");
-const btn_mas_grid_info1 = document.querySelector("#btn_mas_grid_info1");
-const btn_mas_grid_info2 = document.querySelector("#btn_mas_grid_info2");
-const btn_mas_paralax = document.querySelector("#btn_mas_paralax");
+const btns_mas = [
+    document.querySelector("#btn_mas_info_que_es_un_emprendedor"),
+    document.querySelector("#btn_mas_info_caracteristicas_emprendedor"),
+    document.querySelector("#btn_mas_info_retos_emprededor"),
+    document.querySelector("#btn_mas_grid_info1"),
+    document.querySelector("#btn_mas_grid_info2"),
+    document.querySelector("#btn_mas_paralax")
+];
 const overlay_mas_info = document.querySelector(".overlay.mas_info");
 const mas_info_que_es_un_emprendedor = document.querySelector(".mas_info_que_es_un_emprendedor");
 const mas_info_caracteristicas_emprendedor = document.querySelector(".mas_info_caracteristicas_emprendedor");
@@ -35,13 +37,11 @@ const mas_info_retos_emprendedor = document.querySelector(".mas_info_retos_empre
 const mas_info_grid_info1 = document.querySelector(".mas_info_grid_info1");
 const mas_info_grid_info2 = document.querySelector(".mas_info_grid_info2");
 const mas_info_paralax = document.querySelector(".mas_info_paralax");
-
 const cuadro_busqueda = document.querySelector("#cuadro_busqueda");
 
 let grid_product_resul_busqueda = document.querySelector("#grid_products_resul_busqueda");
 let title_resultado_busqueda = document.querySelector(".title_resultado_busqueda");
 let img_searching_buscador = document.querySelector("#img_searching_buscador");
-
 
 const cerrar_mas_info = document.querySelectorAll(".cerrar_mas_info");
 
@@ -62,15 +62,11 @@ const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 }
-
 const campos = {
     nombre: false,
     correo: false,
     mensaje: false
 }
-
-
-
 const validarFormulario = (e)=>{
     switch(e.target.id){
         case "nombre":
@@ -94,7 +90,6 @@ const validarFormulario = (e)=>{
         break;
     }
 }
-
 const validacion = (expresion, campo)=>{
     if(expresion.test(campo.value)){
         document.querySelector(`.fa-check-circle_${campo.id}`).classList.add('active');
@@ -116,17 +111,12 @@ const validacion = (expresion, campo)=>{
         }
     }
 }
-
-
 document.querySelectorAll("#contacto_form input, #contacto_form textarea").forEach((campo)=>{
     campo.addEventListener("keyup", validarFormulario);
     campo.addEventListener("blur", validarFormulario);
 });
 
 const httpRequest = new XMLHttpRequest();
-
-
-
 
 setInterval(() => {
     if(blanco){
@@ -137,15 +127,12 @@ setInterval(() => {
         
         info_img1.classList.add("active");
         info_img2.classList.add("active");
-        info_img3.classList.add("active");
-        
+        info_img3.classList.add("active");        
     }
     if(info_container){
         info_container.classList.add("active");
     }
 }, 1000);
-
-
 
 cuadro_busqueda.addEventListener("keyup",()=>{
     httpRequest.open("POST", "http://localhost/asonaema/searching_api.php", true);
@@ -160,18 +147,14 @@ cuadro_busqueda.addEventListener("keyup",()=>{
                 img_searching_buscador.classList.add('active');
                 grid_product_resul_busqueda.innerHTML = ``;
             }else{
-
                 img_searching_buscador.classList.remove('active');
-
                 let responseJSON = JSON.parse(this.responseText);
                 console.log(this.responseText);
                 title_resultado_busqueda.innerHTML = `Resultado para <span>${cuadro_busqueda.value}</span>`;
-                grid_product_resul_busqueda.innerHTML = "";
-    
+                grid_product_resul_busqueda.innerHTML = "";  
                 
                 
-                for(i=0; i <= responseJSON.length; i++){
-                    
+                for(i=0; i <= responseJSON.length; i++){                   
                     
                     console.log(responseJSON);
                     grid_product_resul_busqueda.innerHTML +=
@@ -189,16 +172,13 @@ cuadro_busqueda.addEventListener("keyup",()=>{
                     </div>
                     </div>
                     </div>
-                    </a>
-                    
+                    </a>                   
                     
                     `
                 }
-            }
+            }            
             
-            
-            console.log(this.responseText);
-            
+            console.log(this.responseText);            
         }
     }
 
@@ -212,8 +192,7 @@ if(contacto_form){
         
     document.querySelector(".mensaje_respuesta i").addEventListener("click", ()=>{
         mensaje_respuesta.classList.remove('active');
-    });
-    
+    });    
     
     form_btn_send.addEventListener("click", (e)=>{
         e.preventDefault();
@@ -251,11 +230,9 @@ if(contacto_form){
                         setTimeout(()=>{
                             lds_ring.classList.remove('active');
         
-                        },2000)
-                        
+                        },2000)                        
                     }
-                }
-    
+                }    
             }
         }else{
             document.querySelector(`.mensaje_error_form`).classList.add('active');
@@ -265,8 +242,6 @@ if(contacto_form){
     });
 
 }
-
-
 
 function focus(){
     document.getElementById("cuadro_busqueda").focus();
@@ -293,73 +268,28 @@ cerrar_busqueda.addEventListener('click', function(){
 });
 
 if(btn_mas_info_que_es_un_emprendedor){
+    btns_mas.forEach((btn_mas)=>{      
 
-    btn_mas_info_que_es_un_emprendedor.addEventListener("click", ()=>{
-        overlay_mas_info.classList.add('active');
-        mas_info_que_es_un_emprendedor.classList.add('active');
-        mas_info_caracteristicas_emprendedor.classList.remove('active');
-        mas_info_retos_emprendedor.classList.remove('active');
-        mas_info_grid_info1.classList.remove('active');
-        mas_info_grid_info2.classList.remove('active');
-        mas_info_paralax.classList.remove('active');
-    });
-    btn_mas_info_caracteristicas_emprendedor.addEventListener("click", ()=>{
-        overlay_mas_info.classList.add('active');
-        mas_info_que_es_un_emprendedor.classList.remove('active');
-        mas_info_caracteristicas_emprendedor.classList.add('active');
-        mas_info_retos_emprendedor.classList.remove('active');
-        mas_info_grid_info1.classList.remove('active');
-        mas_info_grid_info2.classList.remove('active');
-        mas_info_paralax.classList.remove('active');
-    });
-    btn_mas_info_retos_emprededor.addEventListener("click", ()=>{
-        overlay_mas_info.classList.add('active');
-        mas_info_que_es_un_emprendedor.classList.remove('active');
-        mas_info_caracteristicas_emprendedor.classList.remove('active');
-        mas_info_retos_emprendedor.classList.add('active');
-        mas_info_grid_info1.classList.remove('active');
-        mas_info_grid_info2.classList.remove('active');
-        mas_info_paralax.classList.remove('active');
-    });
-    btn_mas_grid_info1.addEventListener("click", ()=>{
-        overlay_mas_info.classList.add('active');
-        mas_info_que_es_un_emprendedor.classList.remove('active');
-        mas_info_caracteristicas_emprendedor.classList.remove('active');
-        mas_info_retos_emprendedor.classList.remove('active');
-        mas_info_grid_info1.classList.add('active');
-        mas_info_grid_info2.classList.remove('active');
-        mas_info_paralax.classList.remove('active');
-    });
-    btn_mas_grid_info2.addEventListener("click", ()=>{
-        overlay_mas_info.classList.add('active');
-        mas_info_que_es_un_emprendedor.classList.remove('active');
-        mas_info_caracteristicas_emprendedor.classList.remove('active');
-        mas_info_retos_emprendedor.classList.remove('active');
-        mas_info_grid_info1.classList.remove('active');
-        mas_info_grid_info2.classList.add('active');
-        mas_info_paralax.classList.remove('active');
-    });
-    btn_mas_paralax.addEventListener("click", ()=>{
-        overlay_mas_info.classList.add('active');
-        mas_info_que_es_un_emprendedor.classList.remove('active');
-        mas_info_caracteristicas_emprendedor.classList.remove('active');
-        mas_info_retos_emprendedor.classList.remove('active');
-        mas_info_grid_info1.classList.remove('active');
-        mas_info_grid_info2.classList.remove('active');
-        mas_info_paralax.classList.add('active');
-    });
-    
-    for(item of cerrar_mas_info){
-    
-        item.addEventListener("click", ()=>{
+        btn_mas.addEventListener("click", (e)=>{
+            console.log(e.target.dataset.popup);
+            let popup = e.target.dataset.popup;
+            overlay_mas_info.classList.add('active');
+            document.querySelector(`.${popup}`).classList.add('active');
+        });
+    });  
+    cerrar_mas_info.forEach((cerrar)=>{
+        cerrar.addEventListener("click", ()=>{
             overlay_mas_info.classList.remove('active');
             mas_info_que_es_un_emprendedor.classList.remove('active');
             mas_info_caracteristicas_emprendedor.classList.remove('active');
             mas_info_retos_emprendedor.classList.remove('active');
-        });
-    }
-}
+            mas_info_grid_info1.classList.remove('active');
+            mas_info_grid_info2.classList.remove('active');
+            mas_info_paralax.classList.remove('active');
 
+        });
+    });    
+}
 
 for(item of header1_menu_social_social_i){
     item.addEventListener("mouseover", ($event)=>{
@@ -370,16 +300,12 @@ for(item of header1_menu_social_social_i){
     });
 }
 
-
-
 if(btn_ir_arriba){
 
     btn_ir_arriba.addEventListener("click", ()=>{
         html.scrollTop = 0;
     });
 }
-
-
 
 function scrollAnimation(){
     
@@ -389,7 +315,6 @@ function scrollAnimation(){
         }
         if(html.scrollTop >=1450){
             if( cont_info4){
-
                 cont_info4.classList.add('active');
             }
         }
@@ -430,8 +355,7 @@ function scrollAnimation(){
             }
             if(obj_position5 < display_size){
                 document.querySelector('#carousel_miembros').classList.add('active');
-            }
-    
+            }    
         }
 
         if(document.querySelector('#sub_container_valor_mision_vision')){
@@ -439,8 +363,6 @@ function scrollAnimation(){
             let obj_position1 = document.querySelector('#sub_container_valor_mision_vision > .mision').getBoundingClientRect().top;
             let obj_position2 = document.querySelector('.organigrama_container').getBoundingClientRect().top;
             let obj_position3 = document.querySelector('.quienes').getBoundingClientRect().top;
-
-
 
             if(obj_position1 < display_size){
                 document.querySelector('#sub_container_valor_mision_vision > .mision').classList.add('active');
@@ -454,26 +376,19 @@ function scrollAnimation(){
                 document.querySelector('.info_quienes').classList.add('active');
                 document.querySelector('.img_quienes').classList.add('active');
             }
-
         }
         if(document.querySelector('.container_categoria')){
             let display_size = window.innerHeight/1.3;
             let obj_position1 = document.querySelector('.container_categoria').getBoundingClientRect().top;
-
-
 
             if(obj_position1 < display_size){
                 // document.querySelector('.categoria_item.capilares').classList.add('active');
                 // document.querySelector('.categoria_item.piel').classList.add('active');
                 // document.querySelector('.categoria_item.bisuteria').classList.add('active');
             }
-
         }
-
     });
 }
-
-
 btn_show_movil.addEventListener("click", ()=>{
     menu_movil.classList.add("active");
 });

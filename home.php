@@ -110,7 +110,7 @@
                 Un emprendedor es una persona que tiene la capacidad de descubrir e identificar algún tipo de oportunidad 
                 de negocios. Así, en base a ello, organiza una serie de recursos con el fin de darle inicio a un proyecto empresarial.
             </p>
-            <button class="column_info_button" id="btn_mas_info_que_es_un_emprendedor">Más Información <i class="fas fa-arrow-right"></i></button>
+            <button class="column_info_button" id="btn_mas_info_que_es_un_emprendedor" data-popup="mas_info_que_es_un_emprendedor">Más Información <i class="fas fa-arrow-right"></i></button>
         </div>
         <div class="column_info">
             <img src="http://localhost/asonaema/img/caracteristicas_emprendedor.svg" loading="lazy" class="column_info_imgtop" alt="">
@@ -120,7 +120,7 @@
                 de confort, más si invertimos dinero y tiempo en nuestro negocio del que queremos vivir. Quien te diga que es 
                 fácil no te dice toda la verdad.
             </p>
-            <button class="column_info_button" id="btn_mas_info_caracteristicas_emprendedor">Más Información <i class="fas fa-arrow-right"></i></button>
+            <button class="column_info_button" id="btn_mas_info_caracteristicas_emprendedor" data-popup="mas_info_caracteristicas_emprendedor">Más Información <i class="fas fa-arrow-right"></i></button>
         </div>
         <div class="column_info">
             <img src="http://localhost/asonaema/img/retos_emprendedor.svg" loading="lazy" class="column_info_imgtop" alt="">
@@ -129,7 +129,7 @@
                 Conseguir la libertad financiera con una idea de negocio es un asunto que pone de cabeza a más de un emprendedor; 
                 hay muchas vertientes a las que hay que prestar atención para conseguir el éxito.
             </p>
-            <button class="column_info_button" id="btn_mas_info_retos_emprededor">Más Información <i class="fas fa-arrow-right"></i></button>
+            <button class="column_info_button" id="btn_mas_info_retos_emprededor" data-popup="mas_info_retos_emprendedor">Más Información <i class="fas fa-arrow-right"></i></button>
         </div>
     </div>
     
@@ -144,7 +144,7 @@
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quis libero numquam ex molestiae ipsum 
                 eius repellendus deleniti voluptas atque possimus iste harum sint, est totam cupiditate magni doloremque at?
             </p>
-            <button class="btn_grid_info" id="btn_mas_grid_info1">Más Información <i class="fas fa-arrow-right"></i></button>
+            <button class="btn_grid_info" id="btn_mas_grid_info1" data-popup="mas_info_grid_info1">Más Información <i class="fas fa-arrow-right"></i></button>
         </div>
     </div>
 
@@ -154,7 +154,7 @@
             <p class="text_paralax">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore magni ea aut iste ex est molestias autem, veritatis dolor vel.
             </p>
-            <button class="btn_paralax" id="btn_mas_paralax">Más Información <i class="fas fa-arrow-right"></i></button>
+            <button class="btn_paralax" id="btn_mas_paralax" data-popup="mas_info_paralax">Más Información <i class="fas fa-arrow-right"></i></button>
         </div>
     </div>
 
@@ -165,7 +165,7 @@
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quis libero numquam ex molestiae ipsum 
                 eius repellendus deleniti voluptas atque possimus iste harum sint, est totam cupiditate magni doloremque at?
             </p>
-            <button class="btn_grid_info" id="btn_mas_grid_info2">Más Información <i class="fas fa-arrow-right"></i></button>
+            <button class="btn_grid_info" id="btn_mas_grid_info2" data-popup="mas_info_grid_info2">Más Información <i class="fas fa-arrow-right"></i></button>
         </div>
 
         <div class="left grid_img">
