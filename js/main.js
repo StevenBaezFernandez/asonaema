@@ -148,7 +148,7 @@ setInterval(() => {
 
 
 cuadro_busqueda.addEventListener("keyup",()=>{
-    httpRequest.open("POST", "http://localhost/asonaema/get_product_api.php", true);
+    httpRequest.open("POST", "http://localhost/asonaema/searching_api.php", true);
     httpRequest.setRequestHeader("Content-Type","application/x-WWW-form-urlencoded");
     httpRequest.send("param="+cuadro_busqueda.value);
     
@@ -164,6 +164,7 @@ cuadro_busqueda.addEventListener("keyup",()=>{
                 img_searching_buscador.classList.remove('active');
 
                 let responseJSON = JSON.parse(this.responseText);
+                console.log(this.responseText);
                 title_resultado_busqueda.innerHTML = `Resultado para <span>${cuadro_busqueda.value}</span>`;
                 grid_product_resul_busqueda.innerHTML = "";
     
