@@ -1975,6 +1975,13 @@ body a{
     font-size: .9em;
     font-family: 'Noto Sans JP', sans-serif;
 }
+.indicador_ruta.galeria{
+    margin-top: 20px;
+}
+.indicador_ruta.galeria a{
+    color: #0d6efd;
+    text-transform: capitalize;
+}
 .indicador_ruta_enlace{
     display: flex;
     margin-bottom: 15px;
@@ -2309,8 +2316,27 @@ body a{
 
 .w-100{
     min-height: 250px;
+    object-fit: cover;
 }
 
+.contenedor_imgs{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+    width: 90%;
+    max-width: 1920px;
+    margin: auto;
+}
+.contenedor_imgs img{
+    max-width: 100%;
+    object-fit: contain;
+}
+.imgs_sub{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+}
 
 
 

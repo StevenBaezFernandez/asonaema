@@ -52,20 +52,43 @@
         </div>
     </div>
 
-    <h1 style="text-align: center">Show Instagram Feed on your Website</h1>
-    <div id="instafeed-container"></div>
+
+    <div class="indicador_ruta galeria">
+        <span class="indicador_ruta_enlace"><a href="http://localhost/asonaema/">inicio</a> <span>/galeria</span></span>
+        <h1 class='title_categoria_product'>Galeria de imagenes</h1>
+    </div>
+
+    <div class="contenedor_imgs">
+
+        <div class="imgs_sub">
+            <img src="http://localhost/asonaema/img/galeria/img2.jpg" loading="lazy" alt="">
+            <img src="http://localhost/asonaema/img/galeria/img3.jpg" loading="lazy" alt="">
+            <img src="http://localhost/asonaema/img/galeria/img4.jpg" loading="lazy" alt="">
+            <img src="http://localhost/asonaema/img/galeria/img5.jpg" loading="lazy" alt="">
+            <img src="http://localhost/asonaema/img/galeria/img6.jpg" loading="lazy" alt="">
+        </div>
+        
+        <div class="imgs_sub">
+            <img src="http://localhost/asonaema/img/galeria/img7.jpg" loading="lazy" alt="">
+            <img src="http://localhost/asonaema/img/galeria/img8.jpg" loading="lazy" alt="">
+            <img src="http://localhost/asonaema/img/galeria/img9.jpg" loading="lazy" alt="">
+            <img src="http://localhost/asonaema/img/galeria/img11.jpg" loading="lazy" alt="">
+            <img src="http://localhost/asonaema/img/galeria/img12.jpg" loading="lazy" alt="">
+        </div>
+        
+        <div class="imgs_sub">
+            <img src="http://localhost/asonaema/img/galeria/img10.jpg" loading="lazy" alt="">
+            <img src="http://localhost/asonaema/img/galeria/img13.jpg" loading="lazy" alt="">
+            <img src="http://localhost/asonaema/img/galeria/img1.jpg" loading="lazy" alt="">
+            <img src="http://localhost/asonaema/img/galeria/img14.jpg" loading="lazy" alt="">
+            <img src="http://localhost/asonaema/img/galeria/img15.jpg" loading="lazy" alt="">
+            <img src="http://localhost/asonaema/img/galeria/img16.jpg" loading="lazy" alt="">
+            <img src="http://localhost/asonaema/img/galeria/img17.jpg" loading="lazy" alt="">
+        </div>
+        
+    </div>
 
 
-
-	<script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
-	<script type="text/javascript">
-	var userFeed = new Instafeed({
-		get: 'asonaema',
-		target: "instafeed-container",
-    	resolution: 'low_resolution',
-		accessToken: '32c93e3b69575fb359addc0e996ea86b'
-	});
-	userFeed.run();
 
     <div class="overlay">
         <div class="main_newsletter">
@@ -82,35 +105,6 @@
         </div>
     </div>
 
-
-    <script id="dsq-count-scr" src="//dilorenst-1.disqus.com/count.js" async></script>
-    <div id="disqus_thread"></div>
-    <script>
-
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://dilorenst-1.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-
-
-
-
-                            
     <div class="blanco">
         <div class="lds-facebook"><div></div><div></div><div></div></div>
         <p class="cargando">Cargando la página</p>
