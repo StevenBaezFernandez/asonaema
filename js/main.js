@@ -267,7 +267,7 @@ cerrar_busqueda.addEventListener('click', function(){
     toggle(panel_busqueda, 'active');
 });
 
-if(btn_mas_info_que_es_un_emprendedor){
+if(btns_mas[0]){
     btns_mas.forEach((btn_mas)=>{      
 
         btn_mas.addEventListener("click", (e)=>{
