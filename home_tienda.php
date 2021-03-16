@@ -1,5 +1,4 @@
-<?php    
-
+<?php 
     require_once 'model/conexion.php';
 
     $resul_home_tienda = $db -> Query("SELECT * FROM `carousel_productos` INNER JOIN productos ON carousel_productos.id_prod = productos.id_prod WHERE carousel = 'home tienda'");
@@ -23,10 +22,6 @@
             $home_tienda .= "<div class='carousel-item'>";
             $home_tienda_indicadores .= "<li data-bs-target='#carouselExampleCaptions' data-bs-slide-to='".$contador_home_tienda."'></li>";
         }
-
-
-
-
 
         $home_tienda .= "<img src='http://localhost/asonaema/img/bg_carousel_tienda_home.jpg' loading='lazy' class='d-block w-100' alt='...'>";
         $home_tienda .= "<div class='carousel-caption carousel_caption_tieda_home'>";
@@ -94,12 +89,9 @@
         $bisuteria_recomendados .= "</div>";
         $bisuteria_recomendados .= "</div>";    
         $bisuteria_recomendados .= "</a>"; 
-    }
-
-    
+    }    
    
 ?>
-
 
 
 <!DOCTYPE html>
@@ -121,42 +113,6 @@
     <?php
         require_once 'header.php';
     ?>
-    <div class="menu_scroll">
-        <ul class="menu scroll">
-            <li><a href="http://localhost/asonaema" class="activo enlace_inicio">INICIO</a></li>
-            <li class=" activo enlace_produsctos"><a href="http://localhost/asonaema/tienda">PRODUCTOS</a></li>
-            <li class="enlace_sobre_nosotros"><a href="http://localhost/asonaema/nosotros" >SOBRE NOSOTROS</a></li>
-            <li class="enlace_galeria"><a href="http://localhost/asonaema/galeria">GALERIA</a></li>
-            <li class="enlace_galeria"><a href="http://localhost/asonaema/contacto">CONTACTO</a></li>
-            
-        </ul>
-    </div>
-    <div class="menu_movil">
-        <div class="header_menu_movil">
-            <h3>Menu</h3>
-            <button id="btn_hide_movil" role="button">
-                <i class="fa fa-bars"></i>
-            </button>
-        </div>
-        <ul class="menu movil">
-            <li><a href="http://localhost/asonaema" class="activo enlace_inicio"><span class="icon_movil fa fa-home"></span> INICIO</a></li>
-            <li class=" activo enlace_produsctos"><a href="http://localhost/asonaema/tienda"><span class="icon_movil fa fa-box"></span> PRODUCTOS</a></li>
-            <li class="enlace_sobre_nosotros"><a href="http://localhost/asonaema/nosotros" ><span class="icon_movil fa fa-users"></span> SOBRE NOSOTROS</a></li>
-            <li class="enlace_galeria"><a href="http://localhost/asonaema/galeria"><span class="icon_movil fa fa-image"></span> GALERIA</a></li>
-            <li class="enlace_galeria"><a href="http://localhost/asonaema/contacto"><span class="icon_movil fa fa-envelope"></span> CONTACTO</a></li>
-            
-        </ul>
-    </div>
-    <div class="panel_busqueda">
-        <div class="cuadro_busqueda">
-            <input type="text" placeholder="Buscar..." class="input_busqueda" id="input_busqueda">
-            <img src="http://localhost/asonaema/img/cancel_icon.svg" loading='lazy' class="cerrar_busqueda" alt="">
-        </div>
-        <div class="resultado_busqueda">
-            <h3 class="alerta_no_funciona"> <i class="fa fa-exclamation-triangle"></i> El buscador no esta listo todavia estamos trabando en ello.</h3>
-        </div>
-    </div>
-
 
     <div class="container_carousel">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -243,8 +199,7 @@
                 </div>
     
             </div>
-        </div>
-    
+        </div>    
         
         <div class="carousel_tienda_home" id="carousel_tienda_home3">
             <h2 class="carousel_tienda_home_title">Productos de bisuteria recomendados</h2>
@@ -264,9 +219,7 @@
     
             </div>
         </div>
-    </div>
-
-    
+    </div> 
 
 
 
@@ -285,7 +238,6 @@
             </div>
         </div>
     </div>
-
 
 
                             

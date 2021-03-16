@@ -18,34 +18,7 @@
     <?php
         require_once 'header.php';
     ?>
-    <div class="menu_scroll">
-        <ul class="menu scroll">
-            <li><a href="/asonaema" class="activo enlace_inicio">INICIO</a></li>
-            <li class=" activo enlace_produsctos"><a href="tienda">PRODUCTOS</a></li>
-            <li class="enlace_sobre_nosotros"><a href="nosotros" >SOBRE NOSOTROS</a></li>
-            <li class="enlace_galeria"><a href="galeria">GALERIA</a></li>
-            <li class="enlace_galeria"><a href="contacto">CONTACTO</a></li>
-            
-        </ul>
-    </div>
-    <div class="menu_movil">
-        <div class="header_menu_movil">
-            <h3>Menu</h3>
-            <button id="btn_hide_movil" role="button">
-                <i class="fa fa-bars"></i>
-            </button>
-        </div>
-        <ul class="menu movil">
-            <li><a href="/asonaema" class="activo enlace_inicio"><span class="icon_movil fa fa-home"></span> INICIO</a></li>
-            <li class=" activo enlace_produsctos"><a href="tienda"><span class="icon_movil fa fa-box"></span> PRODUCTOS</a></li>
-            <li class="enlace_sobre_nosotros"><a href="nosotros" ><span class="icon_movil fa fa-users"></span> SOBRE NOSOTROS</a></li>
-            <li class="enlace_galeria"><a href="galeria"><span class="icon_movil fa fa-image"></span> GALERIA</a></li>
-            <li class="enlace_galeria"><a href="contacto"><span class="icon_movil fa fa-envelope"></span> CONTACTO</a></li>
-            
-        </ul>
-    </div>
     
-
     <div class="container_carousel">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <ol class="carousel-indicators">

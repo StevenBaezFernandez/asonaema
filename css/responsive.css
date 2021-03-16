@@ -78,8 +78,8 @@
     }
 }
 @media screen and (min-width: 947px) and (max-width: 1120px){
-    .menu.principal li.enlace_galeria,
-    .menu.foot li.enlace_galeria{
+    .menu.principal .li_galeria,
+    .menu.foot .li_galeria{
         display: none;
     }
     .categoria_item{
@@ -140,12 +140,12 @@
     
 }
 @media screen and (min-width: 788px) and (max-width: 975px){
-    .menu.principal li.enlace_galeria,
-    .menu.foot li.enlace_galeria{
+    .menu.principal .li_galeria,
+    .menu.foot .li_galeria{
         display: none;
     }
-    .menu.principal li.enlace_sobre_nosotros,
-    .menu.foot li.enlace_sobre_nosotros{
+    .menu.principal .li_nosotros,
+    .menu.foot .li_nosotros{
         display: none;
     }
     .title_contacto{

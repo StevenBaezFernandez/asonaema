@@ -2,7 +2,7 @@
         <div class="header1">
             <div class="left">
                 <i class="fa fa-bars btn-menu" id="btn_show_movil"></i>
-                <h1>¡Puedes tener un pelo natural y sin quimicos!</h1>
+                <h1>¡Esta sesión es para el slogan de la empresa!</h1>
             </div>            
 
             <div class="menu_social">
@@ -39,20 +39,20 @@
             
         </div>
         <div class="header2">
-            <a href="/asonaema" class="contenedor_img_logo">
+            <a href="http://localhost/asonaema/" class="contenedor_img_logo">
                 <img src="http://localhost/asonaema/img/logo_prueba.svg" alt="logotipo">
             </a>
             
             <ul class="menu principal">
-                <li><a href="" class="activo enlace_inicio">INICIO</a></li>
-                <li class=" activo enlace_produsctos"><a href="http://localhost/asonaema/tienda">PRODUCTOS</a></li>
-                <li class="enlace_sobre_nosotros"><a href="http://localhost/asonaema/nosotros" >SOBRE NOSOTROS</a></li>
-                <li class="enlace_galeria"><a href="http://localhost/asonaema/galeria">GALERIA</a></li>
+                <li class="li_inicio"><a href="http://localhost/asonaema/" class="enlace_inicio">INICIO</a></li>
+                <li class="li_tienda"><a  class="enlace_tienda" href="http://localhost/asonaema/tienda">TIENDA</a></li>
+                <li class="li_nosotros"><a class="enlace_nosotros" href="http://localhost/asonaema/nosotros" >SOBRE NOSOTROS</a></li>
+                <li class="li_galeria"><a class="enlace_galeria" href="http://localhost/asonaema/galeria">GALERIA</a></li>
                 <li><a href="">MÁS <i class="fas fa-angle-down"></i></a>
                     <ul class="submenu">
                         <li><a href="http://localhost/asonaema/galeria" class="mas_galeria">Galeria</a></li>
                         <li><a href="http://localhost/asonaema/nosotros" class="mas_sobre_nosotros">sobre nosotros</a></li>
-                        <li><a href="http://localhost/asonaema/tienda" class="mas_productos">productos</a></li>
+                        <li><a href="http://localhost/asonaema/tienda" class="mas_productos">tienda</a></li>
                         <li><a href=""></a></li>
                     </ul>
                 </li>
@@ -87,4 +87,31 @@
         
 </div>
 
+
+<div class="menu_scroll">
+        <ul class="menu scroll">
+            <li><a href="http://localhost/asonaema" class="enlace_inicio">INICIO</a></li>
+            <li><a class="enlace_tienda" href="tienda">TIENDA</a></li>
+            <li><a class="enlace_nosotros" href="nosotros" >SOBRE NOSOTROS</a></li>
+            <li><a class="enlace_galeria" href="galeria">GALERIA</a></li>
+            <li><a class="enlace_galeria" href="contacto">CONTACTO</a></li>
+            
+        </ul>
+    </div>
+    <div class="menu_movil">
+        <div class="header_menu_movil">
+            <h3>Menu</h3>
+            <button id="btn_hide_movil" role="button">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <ul class="menu movil">
+            <li><a href="http://localhost/asonaema" class="enlace_inicio"><span class="icon_movil fa fa-home"></span> INICIO</a></li>
+            <li><a class="enlace_tienda" href="tienda"><span class="icon_movil fa fa-box"></span> TIENDA</a></li>
+            <li><a class="enlace_nosotros" href="nosotros" ><span class="icon_movil fa fa-users"></span> SOBRE NOSOTROS</a></li>
+            <li><a class="enlace_galeria" href="galeria"><span class="icon_movil fa fa-image"></span> GALERIA</a></li>
+            <li><a class="enlace_contacto" href="contacto"><span class="icon_movil fa fa-envelope"></span> CONTACTO</a></li>
+            
+        </ul>
+    </div>
 

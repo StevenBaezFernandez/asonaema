@@ -214,6 +214,7 @@ body a{
     font-size: 16px;
     color: #555555;
     text-decoration: none;
+    text-transform: uppercase;
 }
 .img_home_icon{
     width: 20px;
@@ -221,7 +222,7 @@ body a{
 .menu li a:hover{
     color: #00ac53;
 }
-.menu li a.activo{
+.menu li a.active{
     font-weight: bold;
     color: #00ac53;
 }
@@ -419,6 +420,8 @@ body a{
 }
 .pie_pagina .cuerpo > div:nth-child(2) ul{
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 .pie_pagina .cuerpo > div:nth-child(2) ul li{
     margin: 6px;
@@ -2267,18 +2270,18 @@ body a{
     color: #333;
 }
 .overlay.mas_info > div.active{
-    animation: mas_info_animation .3s ease-out .3s forwards alternate;
+    animation: mas_info_animation .3s ease-out .2s forwards alternate;
     display: block;
 }
 @keyframes mas_info_animation{
     0%{
         opacity: 0;
         visibility: hidden;
-        transform: scale(.5);
+        transform: translateX(-100px);
     }
     100%{
         opacity: 1;
-        transform: scale(1);
+        transform: translateX(0px);
         visibility: visible;
     }
 }
@@ -2336,6 +2339,73 @@ body a{
     display: grid;
     grid-template-columns: 1fr;
     grid-row-gap: 20px;
+}
+.overlay_newsletter{
+    background: rgba(0,0,0,.5);
+}
+.newsletter_popup{
+    background: #fff;
+    position: relative;
+    padding: 30px;
+    box-shadow: 1px 5px 20px rgba(0,0,0, 0.2);
+    border-radius: 5px;
+    text-align: center;
+}
+.newsletter_popup > h2{
+    font-size: 46px;
+    margin-bottom: 25px;
+}
+.newsletter_popup > p{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5px;
+}
+.newsletter_popup > button{
+    display: block;
+    margin: auto;
+    padding: 10px 40px;
+    font-size: 1.2em;
+    border: none;
+    background: #dedede;
+    border-radius: 3px;
+    margin-bottom: 25px;
+}
+.newsletter_popup > button:hover{
+    background: #888888;
+}
+.newsletter_popup > label{
+    font-size: .9em;
+    color: #888888;
+}
+.input_group_newsletter{
+    border: 1px solid #cccccc;
+    width: 80%;
+    height: 45px;
+    margin: auto;
+    position: relative;
+    margin-bottom: 15px;
+}
+.input_group_newsletter i{
+    position: absolute;
+    left: 12px;
+    color: #555;
+    font-size: 20px;
+    line-height: 20px;
+    top: calc(50% - 10px);
+}
+.input_group_newsletter input{
+    height: 100%;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding-left: 40px;
+}
+.newsletter_popup > img{
+    width: 30px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
 }
 
 

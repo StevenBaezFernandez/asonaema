@@ -58,6 +58,31 @@ let form_btn_send = document.querySelector("#form_btn_send");
 let mensaje_respuesta = document.querySelector(".mensaje_respuesta");
 let lds_ring = document.querySelector(".lds-ring");
 
+const URLactual = window.location.pathname;
+
+
+if(URLactual.indexOf("tienda", 10) >=0){
+    document.querySelectorAll(".enlace_tienda").forEach((item)=>{
+        item.classList.add('active');
+    });
+}else if(URLactual.indexOf("nosotros", 10) >=0){
+    document.querySelectorAll(".enlace_nosotros").forEach((item)=>{
+        item.classList.add('active');
+    });
+}else if(URLactual.indexOf("galeria", 10) >=0){
+    document.querySelectorAll(".enlace_galeria").forEach((item)=>{
+        item.classList.add('active');
+    });
+}else if(URLactual.indexOf("contacto", 10) >=0){
+    document.querySelectorAll(".enlace_contacto").forEach((item)=>{
+        item.classList.add('active');
+    });
+}else{
+    document.querySelectorAll(".enlace_inicio").forEach((item)=>{
+        item.classList.add('active');
+    });
+}
+
 const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
@@ -290,6 +315,14 @@ if(btns_mas[0]){
         });
     });    
 }
+
+document.querySelector(".btn_open_newsletter").addEventListener("click", ()=>{
+    document.querySelector(".overlay_newsletter").classList.add('active');
+});
+document.querySelector(".cerrar-newsleter").addEventListener("click", ()=>{
+    document.querySelector(".overlay_newsletter").classList.remove('active');
+});
+
 
 for(item of header1_menu_social_social_i){
     item.addEventListener("mouseover", ($event)=>{
