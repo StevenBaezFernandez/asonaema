@@ -506,6 +506,7 @@ body a{
 }
 .pie_pagina .pie > p{
     margin: 0;
+    text-transform: capitalize;
 }
 .blanco{
     position: fixed;

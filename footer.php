@@ -55,7 +55,7 @@
             <li ><a class="enlace_galeria" href="galeria">GALERIA</a></li>
             <li ><a class="enlace_contacto" href="contacto">CONTACTO</a></li>
         </ul>
-        <p>© Steven báez fernández - 2020</p>
+        <p>© Steven báez</p>
     </div>
 </footer>
 
