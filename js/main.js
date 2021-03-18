@@ -1,19 +1,14 @@
+const httpRequest = new XMLHttpRequest();
 const search_btn = document.querySelector('.search_btn');
 const panel_busqueda = document.querySelector('.panel_busqueda');
 const cerrar_busqueda = document.querySelector('.cerrar_buscador');
-const input_busqueda = document.querySelector('#input_busqueda');
-const foto_laura = document.querySelector('.foto_laura');
-const fashion2_img = document.querySelector('.fashion2');
-const cont_info4 = document.querySelector('.cont_info4');
+const  fashion2_img  =  document.querySelector ( '.fashion2' ) ;
+const  cont_info4  =  document.querySelector ( '.cont_info4' ) ;
 const menu_scroll = document.querySelector('.menu_scroll');
 const menu_movil = document.querySelector('.menu_movil');
 const btn_ir_arriba = document.querySelector('.btn_ir_arriba');
 let html = document.getElementsByTagName("html")[0];
 let body = document.getElementsByTagName("body")[0];
-const info_img1 = document.querySelector(".info_img1");
-const info_img2 =document.querySelector(".info_img2");
-const info_img3 =document.querySelector(".info_img3");
-const info_container = document.querySelector(".info_container");
 const overlay = document.querySelector(".overlay");
 const btn_show_movil = document.querySelector("#btn_show_movil");
 const btn_hide_movil = document.querySelector("#btn_hide_movil");
@@ -60,7 +55,7 @@ let lds_ring = document.querySelector(".lds-ring");
 
 const URLactual = window.location.pathname;
 
-
+// cambiar color de los enlaces segun la ruta
 if(URLactual.indexOf("tienda", 10) >=0){
     document.querySelectorAll(".enlace_tienda").forEach((item)=>{
         item.classList.add('active');
@@ -83,6 +78,7 @@ if(URLactual.indexOf("tienda", 10) >=0){
     });
 }
 
+// Valiacion de formulario con expresiones regulares
 const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
@@ -141,24 +137,16 @@ document.querySelectorAll("#contacto_form input, #contacto_form textarea").forEa
     campo.addEventListener("blur", validarFormulario);
 });
 
-const httpRequest = new XMLHttpRequest();
 
+// loading de la pagina
 setInterval(() => {
     if(blanco){
 
         blanco.classList.add("active");
     }
-    if(info_img1 && info_img2 && info_img3){
-        
-        info_img1.classList.add("active");
-        info_img2.classList.add("active");
-        info_img3.classList.add("active");        
-    }
-    if(info_container){
-        info_container.classList.add("active");
-    }
 }, 1000);
 
+// buscador ajax
 cuadro_busqueda.addEventListener("keyup",()=>{
     httpRequest.open("POST", "http://localhost/asonaema/searching_api.php", true);
     httpRequest.setRequestHeader("Content-Type","application/x-WWW-form-urlencoded");
@@ -210,15 +198,12 @@ cuadro_busqueda.addEventListener("keyup",()=>{
 });
 
 
+// Enviar correo por ajax
 if(contacto_form){
-    // contacto_form.addEventListener("submit", (e)=>{
-        //     e.preventDefault();        
-        // });
         
     document.querySelector(".mensaje_respuesta i").addEventListener("click", ()=>{
         mensaje_respuesta.classList.remove('active');
     });    
-    
     form_btn_send.addEventListener("click", (e)=>{
         e.preventDefault();
         
@@ -268,6 +253,23 @@ if(contacto_form){
 
 }
 
+// newsletter ajax
+
+document.querySelector("#btn_enviar_newsletter").addEventListener("click", ()=>{
+    const nombre = document.querySelector("#newsletter_nombre").value;
+    const correo = document.querySelector("#newsletter_correo").value;
+
+    httpRequest.open('POST', 'http://localhost/asonaema/newsletter_api.php', true);
+    httpRequest.setRequestHeader("Content-Type","application/x-WWW-form-urlencoded");
+    httpRequest.send(`nombre=${nombre}&correo=${correo}`);
+
+    httpRequest.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+            console.log(this.responseText);
+        }
+    }
+});
+
 function focus(){
     document.getElementById("cuadro_busqueda").focus();
     document.getElementById("cuadro_busqueda").value = '';
@@ -280,13 +282,13 @@ function toggle(objeto, clase){
 search_btn.addEventListener('click', function(){
     toggle(panel_busqueda, 'active');
     focus();
-    title_resultado_busqueda.innerHTML = ``;
-    img_searching_buscador.classList.add('active');
-    grid_product_resul_busqueda.innerHTML = ``;
-    setTimeout(function(){
-        focus();
-    },100);
-});
+    // title_resultado_busqueda.innerHTML = ``;
+    // img_searching_buscador.classList.add('active');
+    // grid_product_resul_busqueda.innerHTML = ``;
+    // setTimeout(function(){
+    //     focus();
+    // },100);
+})
 
 cerrar_busqueda.addEventListener('click', function(){
     toggle(panel_busqueda, 'active');
@@ -305,6 +307,9 @@ if(btns_mas[0]){
     cerrar_mas_info.forEach((cerrar)=>{
         cerrar.addEventListener("click", ()=>{
             overlay_mas_info.classList.remove('active');
+            // btns_mas.forEach((btn)=>{
+            //     btn.classList.remove('active');
+            // });
             mas_info_que_es_un_emprendedor.classList.remove('active');
             mas_info_caracteristicas_emprendedor.classList.remove('active');
             mas_info_retos_emprendedor.classList.remove('active');

@@ -93,7 +93,7 @@
             <li><a class="enlace_tienda" href="tienda">TIENDA</a></li>
             <li><a class="enlace_nosotros" href="nosotros" >SOBRE NOSOTROS</a></li>
             <li><a class="enlace_galeria" href="galeria">GALERIA</a></li>
-            <li><a class="enlace_galeria" href="contacto">CONTACTO</a></li>
+            <li><a class="enlace_contacto" href="contacto">CONTACTO</a></li>
             
         </ul>
     </div>
