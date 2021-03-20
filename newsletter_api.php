@@ -14,7 +14,7 @@ if(isset($_POST['nombre']) && isset($_POST['correo'])){
 
     $resul = $db -> Query("SELECT * FROM `newsletter` WHERE correo = '".$correo."'");
 
-    var_dump($resul);
+    // var_dump($resul);
 
     if(!empty($resul)){
         $insercion = $db -> Query("INSERT INTO newsletter(nombre, correo) VALUES ('$nombre', '$correo')");

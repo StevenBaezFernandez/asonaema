@@ -73,6 +73,7 @@
             <input type="email" placeholder="Ingresa tu correo" id="newsletter_correo">
         </div>
         <button class="btn_enviar_newsletter" id="btn_enviar_newsletter">Enviar</button>
+        <p class="mensaje_newsletter">mensaje</p>
         <input type="checkbox" name="no_mostrar_popup" id="no_mostrar_popup">
         <label for="no_mostrar_popup">No mostrar este mensaje denuevo</label>
     </div>

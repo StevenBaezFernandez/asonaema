@@ -265,7 +265,18 @@ document.querySelector("#btn_enviar_newsletter").addEventListener("click", ()=>{
 
     httpRequest.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
-            console.log(this.responseText);
+            if(this.responseText == 'guardado'){
+                document.querySelector(".mensaje_newsletter").innerHTML = `guardado correctamente!`;
+                document.querySelector(".mensaje_newsletter").classList.add('green');
+                document.querySelector(".mensaje_newsletter").classList.remove('red');
+                setTimeout(()=>{
+                    document.querySelector(".overlay_newsletter").classList.remove('active');
+                },1500)
+            }else{
+                document.querySelector(".mensaje_newsletter").innerHTML = `No se pudo guardar el correo`;
+                document.querySelector(".mensaje_newsletter").classList.add('red');
+                document.querySelector(".mensaje_newsletter").classList.remove('green');
+            }
         }
     }
 });
