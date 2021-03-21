@@ -76,7 +76,7 @@
         </div>
         <img src="http://localhost/asonaema/img/icon_searching_product.svg" class="img_searching_buscador active" id="img_searching_buscador" alt="">
         
-        <div class="wraper_grid_products">
+        <div class="wraper_grid_products wraper_grid_products_panel">
             <h4 class="title_resultado_busqueda"></h4>
             <div class="grid_products" id="grid_products_resul_busqueda">
                 
@@ -93,7 +93,7 @@
             <li><a class="enlace_tienda" href="tienda">TIENDA</a></li>
             <li><a class="enlace_nosotros" href="nosotros" >SOBRE NOSOTROS</a></li>
             <li><a class="enlace_galeria" href="galeria">GALERIA</a></li>
-            <li><a class="enlace_galeria" href="contacto">CONTACTO</a></li>
+            <li><a class="enlace_contacto" href="contacto">CONTACTO</a></li>
             
         </ul>
     </div>

@@ -316,7 +316,7 @@ body a{
     position: relative;
     /* overflow-y: scroll; */
     background-image: url('http://localhost/asonaema/img/home-bg-1.jpg');
-    background-size: cover;
+    background-size: 100%;
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -1962,6 +1962,9 @@ body a{
     background: #fbfbfe;
     padding: 40px 0px;
 
+}
+.wraper_grid_products_panel{
+    background: #fff;
 }
 .grid_products{
     width: 90%;

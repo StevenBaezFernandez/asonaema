@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="http://localhost/asonaema/css/main.css">
     <link rel="stylesheet" href="http://localhost/asonaema/css/responsive.css">
     <link rel="shortcut icon" href="http://localhost/asonaema/img/logo_prueba.svg" type="image/x-icon">
-    <title>Home - proctos para el pelo</title>
+    <title>ASONAEMA - Home</title>
 </head>
 <body>
     <?php
