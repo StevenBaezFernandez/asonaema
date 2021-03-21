@@ -452,6 +452,9 @@ body a{
 .pie_pagina .cuerpo .newsletter p{
     margin-bottom: 20px;
 }
+.mensaje_newsletter{
+    
+}
 
 .pie_pagina .cuerpo .news .input_group{
     margin-bottom: 15px;
@@ -1367,7 +1370,11 @@ body a{
     color: #888888;
     margin-bottom: 15px;
 }
-.campo_requerido{
+.green{
+    color: green;
+}
+.campo_requerido,
+.red{
     color: red;
 }
 
@@ -2346,6 +2353,7 @@ body a{
 }
 .overlay_newsletter{
     background: rgba(0,0,0,.5);
+
 }
 .newsletter_popup{
     background: #fff;
@@ -2376,6 +2384,9 @@ body a{
 }
 .newsletter_popup > button:hover{
     background: #888888;
+}
+.newsletter_popup > button:active{
+    transform: scale(.9);
 }
 .newsletter_popup > label{
     font-size: .9em;

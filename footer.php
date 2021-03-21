@@ -66,13 +66,14 @@
         <p>Subscribete a nuestro newsleter para estar informado de nuestras ofertas y productos.</p>
         <div class="input_group input_group_newsletter">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Ingresa tu nombre">
+            <input type="text" placeholder="Ingresa tu nombre" id="newsletter_nombre">
         </div>
         <div class="input_group input_group_newsletter">
             <i class="fas fa-envelope"></i>
-            <input type="email" placeholder="Ingresa tu correo">
+            <input type="email" placeholder="Ingresa tu correo" id="newsletter_correo">
         </div>
-        <button class="btn_enviar_newsletter">Enviar</button>
+        <button class="btn_enviar_newsletter" id="btn_enviar_newsletter">Enviar</button>
+        <p class="mensaje_newsletter">mensaje</p>
         <input type="checkbox" name="no_mostrar_popup" id="no_mostrar_popup">
         <label for="no_mostrar_popup">No mostrar este mensaje denuevo</label>
     </div>

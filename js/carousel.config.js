@@ -112,7 +112,7 @@ window.addEventListener("load", ()=>{
               }
           ]
     });
-})
+});
 window.addEventListener("load", ()=>{
 
     const carosuel_tienda2= new Glider(document.querySelector('.carousel_tienda_home_lista2'), {
@@ -164,7 +164,7 @@ window.addEventListener("load", ()=>{
               }
           ]
     });
-})
+});
 
 window.addEventListener("load", ()=>{
 
@@ -217,7 +217,7 @@ window.addEventListener("load", ()=>{
               }
           ]
     });
-})
+});
 
 window.addEventListener("load", ()=>{
 
@@ -270,4 +270,4 @@ window.addEventListener("load", ()=>{
             }
         ]
     });
-})
+});
