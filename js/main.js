@@ -1,4 +1,3 @@
-const httpRequest = new XMLHttpRequest();
 const search_btn = document.querySelector('.search_btn');
 const panel_busqueda = document.querySelector('.panel_busqueda');
 const cerrar_busqueda = document.querySelector('.cerrar_buscador');
@@ -54,6 +53,10 @@ let mensaje_respuesta = document.querySelector(".mensaje_respuesta");
 let lds_ring = document.querySelector(".lds-ring");
 
 const URLactual = window.location.pathname;
+
+
+
+
 
 // cambiar color de los enlaces segun la ruta
 if(URLactual.indexOf("tienda", 10) >=0){
@@ -147,149 +150,125 @@ setInterval(() => {
 }, 1000);
 
 // buscador ajax
-cuadro_busqueda.addEventListener("keyup",()=>{
-    httpRequest.open("POST", "http://localhost/asonaema/searching_api.php", true);
-    httpRequest.setRequestHeader("Content-Type","application/x-WWW-form-urlencoded");
-    httpRequest.send("param="+cuadro_busqueda.value);
-    
-    httpRequest.onreadystatechange = function(){
-        if(this.readyState == 4 && this.status == 200){
-
-            if(this.responseText == 'vacio'){
-                title_resultado_busqueda.innerHTML = ``;
-                img_searching_buscador.classList.add('active');
-                grid_product_resul_busqueda.innerHTML = ``;
-            }else{
-                img_searching_buscador.classList.remove('active');
-                let responseJSON = JSON.parse(this.responseText);
-                console.log(this.responseText);
-                title_resultado_busqueda.innerHTML = `Resultado para <span>${cuadro_busqueda.value}</span>`;
-                grid_product_resul_busqueda.innerHTML = "";  
-                
-                
-                for(i=0; i <= responseJSON.length; i++){                   
-                    
-                    console.log(responseJSON);
-                    grid_product_resul_busqueda.innerHTML +=
-                    `<a href='http://localhost/asonaema/tienda/producto/${responseJSON[i].id_prod}'>
-                    <div class='tarjeta_producto_categoria producto_busqueda'>
-                    <div class='header_img_card'>
-                    <img src='${responseJSON[i].img_prod}' class='carousel_tienda_home_img' alt=''>
-                    </div>
-                    <div class='body_elemento_tienda_home'>
-                    <h3 class='elemento_tienda_home_title' title='${responseJSON[i].nombre_prod}'>${responseJSON[i].nombre_prod}'</h3>
-                    <p class='elemento_tienda_home_text'>${responseJSON[i].descripcion_prod}</p>
-                    <div class='container_vendedor_y_precio'>
-                    <img src='${responseJSON[i].logo_marca}' alt=''>
-                    <span class='precio_producto'>RD ${responseJSON[i].precio_prod}</span>
-                    </div>
-                    </div>
-                    </div>
-                    </a>                   
-                    
-                    `
-                }
-            }            
+cuadro_busqueda.addEventListener("keyup", ()=>{    
+    fetch('http://localhost/asonaema/searching_api.php?param='+cuadro_busqueda.value)
+    .then(response => response.json())
+    .then(data => {
+        if(data == 'vacio'){
+            title_resultado_busqueda.innerHTML = ``;
+            img_searching_buscador.classList.add('active');
+            grid_product_resul_busqueda.innerHTML = ``;
+        }else{
+            img_searching_buscador.classList.remove('active');         
+            title_resultado_busqueda.innerHTML = `Resultado para <span>${cuadro_busqueda.value}</span>`;
+            grid_product_resul_busqueda.innerHTML = "";              
             
-            console.log(this.responseText);            
-        }
-    }
-
+            for(i=0; i <= data.length; i++){                   
+                grid_product_resul_busqueda.innerHTML +=
+                `<a href='http://localhost/asonaema/tienda/producto/${data[i].id_prod}'>
+                <div class='tarjeta_producto_categoria producto_busqueda'>
+                <div class='header_img_card'>
+                <img src='${data[i].img_prod}' class='carousel_tienda_home_img' alt=''>
+                </div>
+                <div class='body_elemento_tienda_home'>
+                <h3 class='elemento_tienda_home_title' title='${data[i].nombre_prod}'>${data[i].nombre_prod}'</h3>
+                <p class='elemento_tienda_home_text'>${data[i].descripcion_prod}</p>
+                <div class='container_vendedor_y_precio'>
+                <img src='${data[i].logo_marca}' alt=''>
+                <span class='precio_producto'>RD ${data[i].precio_prod}</span>
+                </div>
+                </div>
+                </div>
+                </a>                  
+                `
+            }
+        }            
+    });
 });
-
-
 // Enviar correo por ajax
-if(contacto_form){
-        
+if(contacto_form){        
     document.querySelector(".mensaje_respuesta i").addEventListener("click", ()=>{
         mensaje_respuesta.classList.remove('active');
     });    
     form_btn_send.addEventListener("click", (e)=>{
-        e.preventDefault();
-        
+        e.preventDefault();        
         if(campos.nombre && campos.correo && campos.mensaje){
-
             lds_ring.classList.add('active');
-            console.log(lds_ring);
-            document.querySelector
-            httpRequest.open("POST", "http://localhost/asonaema/email.php", true);
-            httpRequest.setRequestHeader("Content-Type","application/x-WWW-form-urlencoded");
-            httpRequest.send("nombre="+nombre.value+"&correo="+correo.value+"&motivo="+motivo.value+"&mensaje="+mensaje.value);
-    
-            console.log("nombre="+nombre.value+"&correo="+correo.value+"&motivo="+motivo.value+"&mensaje="+mensaje.value);
-            httpRequest.onreadystatechange = function(){
-                if(this.readyState == 4 && this.status == 200){
-                    let respuesta = this.responseText; 
+            fetch(`http://localhost/asonaema/email.php?nombre=${nombre.value}&correo=${correo.value}&motivo=${motivo.value}&mensaje=${mensaje.value}`)
+            .then(response => response.text())
+            .then(data => {
+                if(data == 'Message has been sent'){
+                    nombre.value = '';
+                    correo.value = '';
+                    mensaje.value = '';
+                    html.scrollTop = 0;
+                    campos.nombre = false;
+                    campos.correo = false;
+                    campos.mensaje = false;
                     
-                    if(respuesta == 'Message has been sent'){
-                        console.log(this.responseText);
-                        nombre.value = "";
-                        correo.value = "";
-                        mensaje.value = "";
-    
-                        html.scrollTop = 0;
-                        
-                        mensaje_respuesta.classList.add('active');
-                        document.querySelector(`.mensaje_error_form`).classList.remove('active');
-                        
-                        
-                        document.querySelectorAll(`.fa-check-circle`).forEach((element)=>{
-                            element.classList.remove('active');
-                        })
-                        
-                        setTimeout(()=>{
-                            lds_ring.classList.remove('active');
-        
-                        },2000)                        
-                    }
-                }    
-            }
+                    mensaje_respuesta.classList.add('active');
+                    document.querySelector(`.mensaje_error_form`).classList.remove('active');                    
+                    
+                    document.querySelectorAll(`.fa-check-circle`).forEach((element)=>{
+                        element.classList.remove('active');
+                    })                    
+                    setTimeout(()=>{
+                        lds_ring.classList.remove('active');    
+                    },2000)    
+
+                }else{
+
+                }
+            });
         }else{
             document.querySelector(`.mensaje_error_form`).classList.add('active');
+            validacion(expresiones.nombre, nombre);
+            validacion(expresiones.correo, correo);
+            if(e.target.value !== ''){
+                document.querySelector(`.fa-check-circle_mensaje`).classList.add('active');
+                document.querySelector(`.fa-times-circle_mensaje`).classList.remove('active');
+                campos.mensaje = true;
+            }else{
+                document.querySelector(`.fa-check-circle_mensaje`).classList.remove('active');
+                document.querySelector(`.fa-times-circle_mensaje`).classList.add('active');
+                campos.mensaje = false;
+            }
         }
 
 
     });
 
 }
-
 // newsletter ajax
-
 document.querySelector("#btn_enviar_newsletter").addEventListener("click", ()=>{
     const nombre = document.querySelector("#newsletter_nombre").value;
     const correo = document.querySelector("#newsletter_correo").value;
-
-    httpRequest.open('POST', 'http://localhost/asonaema/newsletter_api.php', true);
-    httpRequest.setRequestHeader("Content-Type","application/x-WWW-form-urlencoded");
-    httpRequest.send(`nombre=${nombre}&correo=${correo}`);
-
-    httpRequest.onreadystatechange = function(){
-        if(this.readyState == 4 && this.status == 200){
-            if(this.responseText == 'guardado'){
-                document.querySelector(".mensaje_newsletter").innerHTML = `guardado correctamente!`;
-                document.querySelector(".mensaje_newsletter").classList.add('green');
-                document.querySelector(".mensaje_newsletter").classList.remove('red');
-                setTimeout(()=>{
-                    document.querySelector(".overlay_newsletter").classList.remove('active');
-                },1500)
-            }else{
-                document.querySelector(".mensaje_newsletter").innerHTML = `No se pudo guardar el correo`;
-                document.querySelector(".mensaje_newsletter").classList.add('red');
-                document.querySelector(".mensaje_newsletter").classList.remove('green');
-            }
+    fetch(`http://localhost/asonaema/newsletter_api.php?nombre=${nombre}&correo=${correo}`)
+    .then(respose => respose.text())
+    .then(data => {
+        console.log(data);
+        if(data == 'guardado'){
+            document.querySelector(".mensaje_newsletter").innerHTML = `guardado correctamente!`;
+            document.querySelector(".mensaje_newsletter").classList.add('green');
+            document.querySelector(".mensaje_newsletter").classList.remove('red');
+            setTimeout(()=>{
+                document.querySelector(".overlay_newsletter").classList.remove('active');
+            },1500)
+        }else{
+            document.querySelector(".mensaje_newsletter").innerHTML = `No se pudo guardar el correo`;
+            document.querySelector(".mensaje_newsletter").classList.add('red');
+            document.querySelector(".mensaje_newsletter").classList.remove('green');
         }
-    }
+    });
 });
 
 function focus(){
     document.getElementById("cuadro_busqueda").focus();
     document.getElementById("cuadro_busqueda").value = '';
 }
-
 function toggle(objeto, clase){
     objeto.classList.toggle(clase);
 }
-
 search_btn.addEventListener('click', function(){
     toggle(panel_busqueda, 'active');
     focus();
@@ -299,12 +278,10 @@ search_btn.addEventListener('click', function(){
     // setTimeout(function(){
     //     focus();
     // },100);
-})
-
+});
 cerrar_busqueda.addEventListener('click', function(){
     toggle(panel_busqueda, 'active');
 });
-
 if(btns_mas[0]){
     btns_mas.forEach((btn_mas)=>{      
 
@@ -339,7 +316,6 @@ document.querySelector(".cerrar-newsleter").addEventListener("click", ()=>{
     document.querySelector(".overlay_newsletter").classList.remove('active');
 });
 
-
 for(item of header1_menu_social_social_i){
     item.addEventListener("mouseover", ($event)=>{
         $event.target.childNodes[1].classList.toggle('active');
@@ -356,8 +332,7 @@ if(btn_ir_arriba){
     });
 }
 
-function scrollAnimation(){
-    
+function scrollAnimation(){    
     document.addEventListener("scroll", ()=>{
         if(html.scrollTop >=800 && fashion2_img){
             fashion2_img.classList.add('active');

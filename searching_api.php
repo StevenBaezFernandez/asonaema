@@ -4,8 +4,8 @@ header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Conte
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
 header("Allow: GET, POST, OPTIONS, PUT, DELETE");
 
-if(!empty($_POST['param'])){
-    $param = $_POST['param'];
+if(!empty($_GET['param'])){
+    $param = $_GET['param'];
     require_once 'model/conexion.php';    
     
     $consultas['resul_by_name'] = $db -> Query("SELECT * FROM productos INNER JOIN vendedores ON productos.id_vend = vendedores.id_vend WHERE nombre_prod LIKE '%".$param."%'");

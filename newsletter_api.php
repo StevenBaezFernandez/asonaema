@@ -4,17 +4,12 @@ header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Conte
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
 header("Allow: GET, POST, OPTIONS, PUT, DELETE");
 
-
-if(isset($_POST['nombre']) && isset($_POST['correo'])){
+if(isset($_GET['nombre']) && isset($_GET['correo'])){
     require_once 'model/conexion.php'; 
-    $nombre = $_POST['nombre'];
-    $correo = $_POST['correo'];
-
-    // echo($nombre. "  ". $correo);
+    $nombre = $_GET['nombre'];
+    $correo = $_GET['correo']
 
     $resul = $db -> Query("SELECT * FROM `newsletter` WHERE correo = '".$correo."'");
-
-    // var_dump($resul);
 
     if(!empty($resul)){
         $insercion = $db -> Query("INSERT INTO newsletter(nombre, correo) VALUES ('$nombre', '$correo')");

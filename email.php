@@ -12,39 +12,34 @@ require 'phpmailer/Exception.php';
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 
-if(isset($_POST['nombre'], $_POST['correo'], $_POST['motivo'], $_POST['mensaje'])){
-    $nombre = $_POST['nombre'];
-    $correo = $_POST['correo'];
-    $motivo = $_POST['motivo'];
-    $mensaje = $_POST['mensaje'];
+if(isset($_GET['nombre'], $_GET['correo'], $_GET['motivo'], $_GET['mensaje'])){
+    $nombre = $_GET['nombre'];
+    $correo = $_GET['correo'];
+    $motivo = $_GET['motivo'];
+    $mensaje = $_GET['mensaje'];
 
     $body = "<b>Nombre:</b> " . $nombre . "<br><b>Correo:</b> " . $correo . "<br><br>" . $mensaje;
-
-
     
     $mail = new PHPMailer(true);
     
-    try {
-        //Server settings
-        // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-        $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-        $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'contacto.asonaema@gmail.com';                     //SMTP username
-        $mail->Password   = 'ASONAEMA@contacto20';                               //SMTP password
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-        $mail->Port       = 587;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+    try {        
+        $mail->isSMTP();
+        $mail->Host       = 'smtp.gmail.com';
+        $mail->SMTPAuth   = true;
+        $mail->Username   = 'contacto.asonaema@gmail.com';
+        $mail->Password   = 'ASONAEMA@contacto20';
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port       = 587;
     
         //Recipients
         $mail->setFrom('contacto.asonaema@gmail.com', $nombre);
-        $mail->addAddress('contacto.asonaema@gmail.com');     //Add a recipient
+        $mail->addAddress('contacto.asonaema@gmail.com');
     
         //Content
-        $mail->isHTML(true);                                  //Set email format to HTML
+        $mail->isHTML(true);
         $mail->Subject = $motivo;
         $mail->Body    = $body;
-        $mail->CharSet = "UTF-8";
-    
+        $mail->CharSet = "UTF-8";    
         $mail->send();
         echo 'Message has been sent';
     } catch (Exception $e) {
@@ -54,10 +49,5 @@ if(isset($_POST['nombre'], $_POST['correo'], $_POST['motivo'], $_POST['mensaje']
 }else{
     echo"datos no recibidos";
 }
-
-
-
-
-
 
 ?>
