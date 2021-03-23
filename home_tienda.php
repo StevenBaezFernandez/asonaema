@@ -1,17 +1,40 @@
 <?php 
     require_once 'model/conexion.php';
-
     $resul_home_tienda = $db -> Query("SELECT * FROM `carousel_productos` INNER JOIN productos ON carousel_productos.id_prod = productos.id_prod WHERE carousel = 'home tienda'");
-    $resul_capilares = $db -> Query("SELECT productos.id_prod, carousel, position, nombre_prod, descripcion_prod, precio_prod, img_prod, vendedores.nombre_marca, vendedores.logo_marca FROM carousel_productos INNER JOIN productos ON carousel_productos.id_prod = productos.id_prod INNER JOIN vendedores ON productos.id_vend = vendedores.id_vend WHERE carousel = 'capilares recomendados' ORDER BY `carousel_productos`.`position` ASC");
-    $resul_piel = $db -> Query("SELECT productos.id_prod, carousel, position, nombre_prod, descripcion_prod, precio_prod, img_prod, vendedores.nombre_marca, vendedores.logo_marca FROM carousel_productos INNER JOIN productos ON carousel_productos.id_prod = productos.id_prod INNER JOIN vendedores ON productos.id_vend = vendedores.id_vend WHERE carousel = 'piel recomendados' ORDER BY `carousel_productos`.`position` ASC");
-    $resul_bisuteria = $db -> Query("SELECT productos.id_prod, carousel, position, nombre_prod, descripcion_prod, precio_prod, img_prod, vendedores.nombre_marca, vendedores.logo_marca FROM carousel_productos INNER JOIN productos ON carousel_productos.id_prod = productos.id_prod INNER JOIN vendedores ON productos.id_vend = vendedores.id_vend WHERE carousel = 'bisuteria recomendados' ORDER BY `carousel_productos`.`position` ASC");
-    
+    $consultas = [
+        $db -> Query("SELECT productos.id_prod, carousel, position, nombre_prod, descripcion_prod, precio_prod, img_prod, vendedores.nombre_marca, vendedores.logo_marca FROM carousel_productos INNER JOIN productos ON carousel_productos.id_prod = productos.id_prod INNER JOIN vendedores ON productos.id_vend = vendedores.id_vend WHERE carousel = 'capilares recomendados' ORDER BY `carousel_productos`.`position` ASC"),
+        $db -> Query("SELECT productos.id_prod, carousel, position, nombre_prod, descripcion_prod, precio_prod, img_prod, vendedores.nombre_marca, vendedores.logo_marca FROM carousel_productos INNER JOIN productos ON carousel_productos.id_prod = productos.id_prod INNER JOIN vendedores ON productos.id_vend = vendedores.id_vend WHERE carousel = 'piel recomendados' ORDER BY `carousel_productos`.`position` ASC"),
+        $db -> Query("SELECT productos.id_prod, carousel, position, nombre_prod, descripcion_prod, precio_prod, img_prod, vendedores.nombre_marca, vendedores.logo_marca FROM carousel_productos INNER JOIN productos ON carousel_productos.id_prod = productos.id_prod INNER JOIN vendedores ON productos.id_vend = vendedores.id_vend WHERE carousel = 'bisuteria recomendados' ORDER BY `carousel_productos`.`position` ASC")
+    ];
     $home_tienda_indicadores = "";
     $home_tienda = "";
-    $capilares_recomendados = "";
-    $piel_recomendados = "";
-    $bisuteria_recomendados = "";
+    $array_temp = [
+        $capilares_recomendados = "",
+        $piel_recomendados = "",
+        $bisuteria_recomendados = ""
+    ];
     $contador_home_tienda = 0;
+    $i = 0;
+    foreach($consultas as $consulta){
+        while($row = mysqli_fetch_array($consulta)){
+            $array_temp[$i] .= "<a href='http://localhost/asonaema/tienda/producto/".$row['id_prod']."'>";
+            $array_temp[$i] .= "<div class='carousel_tienda_home_elemento'>";
+            $array_temp[$i] .= "<div class='header_img_card'>";
+            $array_temp[$i] .= "<img src='".$row['img_prod']."' loading='lazy' class='carousel_tienda_home_img' alt=''>";
+            $array_temp[$i] .= "</div>";
+            $array_temp[$i] .= "<div class='body_elemento_tienda_home'>";
+            $array_temp[$i] .= "<h3 class='elemento_tienda_home_title' title='".$row['nombre_prod']."'>".$row['nombre_prod']."</h3>";
+            $array_temp[$i] .= "<p class='elemento_tienda_home_text'>".$row['descripcion_prod']."</p>";
+            $array_temp[$i] .= "<div class='container_vendedor_y_precio'>";
+            $array_temp[$i] .= "<img src='".$row['logo_marca']."' loading='lazy' alt=''>";
+            $array_temp[$i] .= "<span class='precio_producto'>RD $".$row['precio_prod']."</span>";
+            $array_temp[$i] .= "</div>";
+            $array_temp[$i] .= "</div>";
+            $array_temp[$i] .= "</div>";    
+            $array_temp[$i] .= "</a>";
+        }
+        $i ++;
+    }
 
     while($row = mysqli_fetch_array($resul_home_tienda)){
 
@@ -37,59 +60,7 @@
         $home_tienda .= "</div>";
         
         $contador_home_tienda +=1;
-    }
-
-    while($row = mysqli_fetch_array($resul_capilares)){
-        $capilares_recomendados .= "<a href='http://localhost/asonaema/tienda/producto/".$row['id_prod']."'>";
-        $capilares_recomendados .= "<div class='carousel_tienda_home_elemento'>";
-        $capilares_recomendados .= "<div class='header_img_card'>";
-        $capilares_recomendados .= "<img src='".$row['img_prod']."' loading='lazy' class='carousel_tienda_home_img' alt=''>";
-        $capilares_recomendados .= "</div>";
-        $capilares_recomendados .= "<div class='body_elemento_tienda_home'>";
-        $capilares_recomendados .= "<h3 class='elemento_tienda_home_title' title='".$row['nombre_prod']."'>".$row['nombre_prod']."</h3>";
-        $capilares_recomendados .= "<p class='elemento_tienda_home_text'>".$row['descripcion_prod']."</p>";
-        $capilares_recomendados .= "<div class='container_vendedor_y_precio'>";
-        $capilares_recomendados .= "<img src='".$row['logo_marca']."' loading='lazy' alt=''>";
-        $capilares_recomendados .= "<span class='precio_producto'>RD $".$row['precio_prod']."</span>";
-        $capilares_recomendados .= "</div>";
-        $capilares_recomendados .= "</div>";
-        $capilares_recomendados .= "</div>";    
-        $capilares_recomendados .= "</a>"; 
-    }
-    while($row = mysqli_fetch_array($resul_piel)){
-        $piel_recomendados .= "<a href='http://localhost/asonaema/tienda/producto/".$row['id_prod']."'>";
-        $piel_recomendados .= "<div class='carousel_tienda_home_elemento'>";
-        $piel_recomendados .= "<div class='header_img_card'>";
-        $piel_recomendados .= "<img src='".$row['img_prod']."' loading='lazy' class='carousel_tienda_home_img' alt=''>";
-        $piel_recomendados .= "</div>";
-        $piel_recomendados .= "<div class='body_elemento_tienda_home'>";
-        $piel_recomendados .= "<h3 class='elemento_tienda_home_title' title='".$row['nombre_prod']."'>".$row['nombre_prod']."</h3>";
-        $piel_recomendados .= "<p class='elemento_tienda_home_text'>".$row['descripcion_prod']."</p>";
-        $piel_recomendados .= "<div class='container_vendedor_y_precio'>";
-        $piel_recomendados .= "<img src='".$row['logo_marca']."' loading='lazy' alt=''>";
-        $piel_recomendados .= "<span class='precio_producto'>RD $".$row['precio_prod']."</span>";
-        $piel_recomendados .= "</div>";
-        $piel_recomendados .= "</div>";
-        $piel_recomendados .= "</div>";    
-        $piel_recomendados .= "</a>"; 
-    }
-    while($row = mysqli_fetch_array($resul_bisuteria)){
-        $bisuteria_recomendados .= "<a href='http://localhost/asonaema/tienda/producto/".$row['id_prod']."'>";
-        $bisuteria_recomendados .= "<div class='carousel_tienda_home_elemento'>";
-        $bisuteria_recomendados .= "<div class='header_img_card'>";
-        $bisuteria_recomendados .= "<img src='".$row['img_prod']."' loading='lazy' class='carousel_tienda_home_img' alt=''>";
-        $bisuteria_recomendados .= "</div>";
-        $bisuteria_recomendados .= "<div class='body_elemento_tienda_home'>";
-        $bisuteria_recomendados .= "<h3 class='elemento_tienda_home_title' title='".$row['nombre_prod']."'>".$row['nombre_prod']."</h3>";
-        $bisuteria_recomendados .= "<p class='elemento_tienda_home_text'>".$row['descripcion_prod']."</p>";
-        $bisuteria_recomendados .= "<div class='container_vendedor_y_precio'>";
-        $bisuteria_recomendados .= "<img src='".$row['logo_marca']."' loading='lazy' alt=''>";
-        $bisuteria_recomendados .= "<span class='precio_producto'>RD $".$row['precio_prod']."</span>";
-        $bisuteria_recomendados .= "</div>";
-        $bisuteria_recomendados .= "</div>";
-        $bisuteria_recomendados .= "</div>";    
-        $bisuteria_recomendados .= "</a>"; 
-    }    
+    } 
    
 ?>
 
@@ -134,7 +105,6 @@
           </div>
     </div>
 
-
     <div class="container_categoria">
         <h1 class="title_categoria">Categorias</h1>
         <div class="categoria">
@@ -156,7 +126,6 @@
         </div>
     </div>
 
-
     <div class="carousel_container_all_wraper">
         <div class="carousel_tienda_home" id="carousel_tienda_home1">
             <h2 class="carousel_tienda_home_title">Capilares recomendados</h2>
@@ -172,15 +141,14 @@
                 <div class="carousel_tienda_home_lista1">
 
                     <?php
-                        print_r($capilares_recomendados); 
+                        print_r($array_temp[0]); 
                     ?>
                     
                 </div>
     
                 
             </div>
-        </div>
-    
+        </div>    
     
         <div class="carousel_tienda_home" id="carousel_tienda_home2">
             <h2 class="carousel_tienda_home_title">Productos para la piel recomendados</h2>
@@ -194,7 +162,7 @@
                 </button>
     
                 <div class="carousel_tienda_home_lista2">
-                    <?php print_r($piel_recomendados);?>
+                    <?php print_r($array_temp[1]);?>
                     
                 </div>
     
@@ -213,16 +181,13 @@
                 </button>
     
                 <div class="carousel_tienda_home_lista3">
-                    <?php print_r($bisuteria_recomendados);?>
+                    <?php print_r($array_temp[2]);?>
                     
                 </div>
     
             </div>
         </div>
     </div> 
-
-
-
 
     <div class="overlay">
         <div class="main_newsletter">
@@ -238,8 +203,6 @@
             </div>
         </div>
     </div>
-
-
                             
     <div class="blanco">
         <div class="lds-facebook"><div></div><div></div><div></div></div>
