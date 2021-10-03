@@ -16,10 +16,6 @@
     ?>
 
 
-    <div class="banner_nosotros">
-        <div class="cover_banner_nosotros">
-        </div>
-    </div>
     
     <div class="valores_mision_vision_container">
         <h2 class="nosotros_main_title">Nosotros</h2>
@@ -29,29 +25,31 @@
                 <img src="img/mission.svg" loading="lazy" class="mision_img" alt="">
                 <h2 class="mision_title">Misión</h2>
                 <p class="mision_text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, ratione corrupti. Vero, praesentium. 
-                    Molestias quis consectetur debitis earum dicta? Blanditiis architecto quidem unde numquam dolorum. Explicabo, 
-                    ipsam! Similique odio hic temporibus, deserunt ipsum quibusdam expedita tempore adipisci!
+                Mejorar la calidad de vida de aquellas personas que tienen el potencial y sobre todo el deseo de
+                emprender su propio negocio usando sus manos como principal recurso
                 </p>
             </div>
             <div class="valores" id="valores">
                 <img src="img/value.svg" loading="lazy" class="valores_img" alt="">
                 <h2 class="valores_title">Valores</h2>
                 <ul class="lista_valores">
-                    <li><span class="number_item_valor">1</span> Lorem ipsum dolor sit amet.</li>
-                    <li><span class="number_item_valor">2</span>Lorem ipsum dolor sit amet.</li>
-                    <li><span class="number_item_valor">3</span>Lorem ipsum dolor sit amet.</li>
-                    <li><span class="number_item_valor">4</span>Lorem ipsum dolor sit amet.</li>
-                    <li><span class="number_item_valor">5</span>Lorem ipsum dolor sit amet.</li>
+                    <li><span class="number_item_valor">1</span>Solidaridad</li>
+                    <li><span class="number_item_valor">2</span>Responsabilidad</li>
+                    <li><span class="number_item_valor">3</span>Respeto</li>
+                    <li><span class="number_item_valor">4</span>Compromiso</li>
+                    <li><span class="number_item_valor">5</span>Honestidad</li>
+                    <li><span class="number_item_valor">6</span>No discriminacion</li>
+                    <li><span class="number_item_valor">7</span>Equidad</li>
                 </ul>
             </div>
             <div class="vision" id="vision">
                 <img src="img/vision.svg" loading="lazy" class="vision_img" alt="">
                 <h2 class="vision_title">Visión</h2>
                 <p class="vision_text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, ratione corrupti. Vero, praesentium. 
-                    Molestias quis consectetur debitis earum dicta? Blanditiis architecto quidem unde numquam dolorum. Explicabo, 
-                    ipsam! Similique odio hic temporibus, deserunt ipsum quibusdam expedita tempore adipisci!
+                    Desarrollar proyectos innovadores. Construir una Comunidad Emprendedora eficiente, flexible y
+                    transparente formada por emprendedores formalmente capacitados. Alcanzar una financiación
+                    estable, equilibrada y sostenible. Buscar la mejora continua de los servicios que ofrecen nuestros
+                    asociados y de nuestra calidad de vida.
                 </p>
             </div>
         </div>
@@ -67,10 +65,10 @@
         <div class="info_quienes">
             <h3 class="quienes_title">Que es ASONAEMA?</h3>
             <p class="quienes_text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, placeat autem mollitia nesciunt facilis 
-                quae expedita numquam voluptatum doloribus iusto unde. Laboriosam nisi quod nihil. Similique neque libero nemo 
-                adipisci dolor laboriosam quae aliquam cum illum minima veritatis, voluptates nobis eligendi distinctio, 
-                obcaecati, ipsam a repellat! Corrupti facere veritatis nisi?
+                Asociación Nacional de Emprendedores Artífices es una entidad sin fines de lucro que desarrolla
+                actividades, culturales, educativas y cooperación, dirigidas a mejorar la calidad de vida de los
+                Emprendedores artesanos a nivel del territorio nacional dominicano con diferentes capacidades y
+                habilidades.
             </p>
             <button class="quienes_btn"> Más información <i class="fas fa-arrow-right"></i></button>
         </div>

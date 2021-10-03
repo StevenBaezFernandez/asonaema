@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <link rel="stylesheet" href="http://localhost/asonaema/css/main.css">
     <link rel="stylesheet" href="http://localhost/asonaema/css/responsive.css">
-    <link rel="shortcut icon" href="http://localhost/asonaema/img/logo_prueba.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="http://localhost/asonaema/img/logo.png" type="image/x-icon">
     <title>ASONAEMA - Home</title>
 </head>
 <body>

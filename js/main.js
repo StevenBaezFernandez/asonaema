@@ -384,15 +384,9 @@ function scrollAnimation(){
 
         if(document.querySelector('#sub_container_valor_mision_vision')){
             let display_size = window.innerHeight/1.3;
-            let obj_position1 = document.querySelector('#sub_container_valor_mision_vision > .mision').getBoundingClientRect().top;
             let obj_position2 = document.querySelector('.organigrama_container').getBoundingClientRect().top;
             let obj_position3 = document.querySelector('.quienes').getBoundingClientRect().top;
 
-            if(obj_position1 < display_size){
-                document.querySelector('#sub_container_valor_mision_vision > .mision').classList.add('active');
-                document.querySelector('#sub_container_valor_mision_vision > .valores').classList.add('active');
-                document.querySelector('#sub_container_valor_mision_vision > .vision').classList.add('active');
-            }
             if(obj_position2 < display_size){
                 document.querySelector('.organigrama_container').classList.add('active');
             }

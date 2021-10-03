@@ -142,8 +142,8 @@ body a{
 }
 .header-father .header2 .contenedor_img_logo img{
     width: 100%;
-    max-width: 300px;
-    min-width: 200px;
+    max-width: 480px;
+    min-width: 128px;
 }
 .banner{
     width: 100%;
@@ -850,16 +850,16 @@ body a{
     max-width: 500px;
 }
 .column_info_container.active > .column_info:nth-child(2),
-#sub_container_valor_mision_vision > .mision.active{
-    animation: animation_column_info_1 1s ease-out .2s forwards;
+#sub_container_valor_mision_vision > .mision{
+    animation: animation_column_info_1 1s ease-out .8s forwards;
 }
 .column_info_container.active > .column_info:nth-child(3),
-#sub_container_valor_mision_vision > .valores.active{
-    animation: animation_column_info_2 1s ease-out .4s forwards;
+#sub_container_valor_mision_vision > .valores{
+    animation: animation_column_info_2 1s ease-out 1.3s forwards;
 }
 .column_info_container.active > .column_info:nth-child(4),
-#sub_container_valor_mision_vision > .vision.active{
-    animation: animation_column_info_3 1s ease-out .2s forwards;
+#sub_container_valor_mision_vision > .vision{
+    animation: animation_column_info_3 1s ease-out .8s forwards;
 }
   @keyframes animation_column_info_1{
     0%{
