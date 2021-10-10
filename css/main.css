@@ -141,7 +141,7 @@ body a{
     width: 30%;
 }
 .header-father .header2 .contenedor_img_logo img{
-    width: 100%;
+    /* width: 100%; */
     max-width: 480px;
     min-width: 128px;
 }
