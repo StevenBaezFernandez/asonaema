@@ -89,10 +89,6 @@
     
                 <a href="<?php echo("https://wa.me/18492052221?text=Hola, estoy interesado en este producto: http://localhost/asonaema/".$url);?>" target="_blank" class="btn_contactar_vendedor">Contactar el vendedor <i class="fab fa-whatsapp"></i></a>
 
-                <div class="container_redes_sociales_vendedor">
-                    <p class="redes_sociales_vendedor"><span>Encuentra más en: </span> <i class="fab fa-facebook-f"></i> <i class="fab fa-instagram"></i></p>
-                </div>
-
                 <!-- <div class="img_vendedor_producto">
                     <img src="http://localhost/asonaema/img/logo_vendedor4.jpeg" alt="">
                     <p class="nombre_vendedor">Nombre vendedor</p>
@@ -116,7 +112,7 @@
         <div class="wraper_carousel_info_vendedor">
             <div class="container_carousel_producto_recomendado_producto">
                 <div class="carousel_producto_recomendado_producto" id="carousel_producto_recomendado_producto">
-                    <h2 class="carousel_tienda_home_title">Más publicaciones del vendedor</h2>
+                    <h2 class="carousel_tienda_home_title">Productos relacionados</h2>
                     <div class="carousel_tienda_home_contenedor">
                         <button aria-label="anterior" class="carousel_tienda_home_anterior carousel_producto_recomendado_producto_anterior">
                             <i class="fas fa-chevron-left"></i>
@@ -141,16 +137,27 @@
                 <img src="<?php echo($array_resul_producto['logo_marca']);?>" alt="" class="logo_vendedor">
                 <h3 class="nombre_vendedor_info_vendedor"><?php echo($array_resul_producto['nombre_vend']." ".$array_resul_producto['apellido_vend']);?></h3>
             </div>
-            <div class="contact_btns_social_media page_productos">
-                <a href="#" class="btn_facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="btn_instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="btn_twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="btn_google_plus"><i class="fab fa-google-plus"></i></a>
+            <div class="detalles_producto">
+                <div class="title__detalles_producto">Detalles del producto</div>
+                <div class="detalles_producto_inf">
+                    <p> <strong>Terminado:</strong> Blanco</p>
+                    <p> <strong>Material:</strong> Plástico</p>
+                    <p> <strong>Base:</strong> E27</p>
+                    <p> <strong>Volts:</strong> 100 - 240 V ~</p>
+                    <p> <strong>Potencia: </strong> 8.5 W</p>
+                    <p> <strong>Horas de vida:  </strong> 15000 horas</p>
+                    <p> <strong>Ángulo de apertura:   </strong> 220°</p>
+                    <p> <strong>Color de luz:    </strong>  Luz de día</p>
+                    <p> <strong> Temperatura de color:   </strong> 6 500 K</p>
+                    <p> <strong>Flujo luminoso:   </strong>800 lm</p>
+                    <p> <strong>Atenuable:   </strong>  No</p>
+
+                </div>
+                
+                 
+
 
             </div>
-            <h3 class="info_vendedor_correo"><i class="fas fa-envelope"></i> <?php echo($array_resul_producto['correo_vend']);?></h3>
-
-            <h3 class="info_vendedor_direccion"><i class="fas fa-map-marker-alt"></i> Santo Domingo Norte, Sabana Perdida, Los altos de los cerros, C/ 7th, #56</h3>
         </div>
     </div>
 

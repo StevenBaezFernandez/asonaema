@@ -40,7 +40,7 @@
         </div>
         <div class="header2">
             <a href="http://localhost/asonaema/" class="contenedor_img_logo">
-                <img src="http://localhost/asonaema/img/prueba_logo5.png" alt="logotipo">
+                <img src="http://localhost/asonaema/img/POUERIET-LOGO2.png" alt="logotipo">
             </a>
             
             <ul class="menu principal">

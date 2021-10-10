@@ -141,7 +141,7 @@ body a{
     width: 30%;
 }
 .header-father .header2 .contenedor_img_logo img{
-    width: 100%;
+    /* width: 100%; */
     max-width: 480px;
     min-width: 128px;
 }
@@ -2203,9 +2203,9 @@ body a{
     border: 1px solid #e7ebed;
     margin: 0px 10px;
     border-radius: 7px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* display: flex; */
+    /* flex-direction: column;
+    align-items: center; */
     padding: 20px;
 }
 .container_img_info_vendedor img{
@@ -2222,25 +2222,6 @@ body a{
     font-weight: 900;
     text-transform: capitalize;
     color: #2a3b47;
-}
-.contact_btns_social_media.page_productos{
-    margin: 20px 0;
-    text-align: center;
-}
-.info_vendedor_correo,
-.info_vendedor_direccion{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1em;
-    text-align: center;
-    margin-bottom: 30px;
-}
-.info_vendedor_correo i,
-.info_vendedor_direccion i{
-    font-size: 2em;
-    margin: 3px;
-    color: #666666;
 }
 
 
