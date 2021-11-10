@@ -11,8 +11,8 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <link rel="stylesheet" href="http://localhost/asonaema/css/main.css">
     <link rel="stylesheet" href="http://localhost/asonaema/css/responsive.css">
-    <link rel="shortcut icon" href="http://localhost/asonaema/img/logo.png" type="image/x-icon">
-    <title>ASONAEMA - Home</title>
+    <link rel="shortcut icon" href="http://localhost/asonaema/img/POUERIET-LOGO2.png" type="image/x-icon">
+    <title>POUERIET - Home</title>
 </head>
 <body>
     <?php
@@ -77,33 +77,45 @@
         <div id="particles-js"></div> 
         
         <div class="column_info">
-            <img src="http://localhost/asonaema/img/emprendedor.svg" loading="lazy" class="column_info_imgtop" alt="">
-            <h2 class="column_info_title">¿Que es un emprendedor?</h2>
+            <img src="img/arquitectura.svg" class="column_info_imgtop" alt="">
+
+            <h2 class="column_info_title">Arquitectura</h2>
             <p class="column_info_text">
-                Un emprendedor es una persona que tiene la capacidad de descubrir e identificar algún tipo de oportunidad 
-                de negocios. Así, en base a ello, organiza una serie de recursos con el fin de darle inicio a un proyecto empresarial.
+                Nuestro equipo de profesionales posee gran capacidad y experiencia en la gestión y desarrollo de proyectos de arquitectura, 
+                ingeniería, supervisión, construcción y servicios integrales.
             </p>
             <button class="column_info_button" id="btn_mas_info_que_es_un_emprendedor" data-popup="mas_info_que_es_un_emprendedor">Más Información <i class="fas fa-arrow-right"></i></button>
         </div>
         <div class="column_info">
-            <img src="http://localhost/asonaema/img/caracteristicas_emprendedor.svg" loading="lazy" class="column_info_imgtop" alt="">
-            <h2 class="column_info_title">Característica de un emprendedor</h2>
+        <img src="img/energia_renovable.svg" class="column_info_imgtop" alt="">
+
+            <h2 class="column_info_title">Energía renovable</h2>
             <p class="column_info_text">
-                Emprender exige mucho esfuerzo y trabajo, incertidumbre, miedos al cambio, ambición y vivir fuera de la zona 
-                de confort, más si invertimos dinero y tiempo en nuestro negocio del que queremos vivir. Quien te diga que es 
-                fácil no te dice toda la verdad.
+            El compromiso de Escala Solar, como compañía especializada en el desarrollo de proyectos de instalaciones fotovoltaicas, 
+            es ofrecer a nuestros clientes un servicio integral y atención personalizada, partiendo de la honestidad y la profesionalidad 
+            apostando por la alta calidad en materiales y componentes del sistema y utilizando la más avanzada tecnología.
             </p>
             <button class="column_info_button" id="btn_mas_info_caracteristicas_emprendedor" data-popup="mas_info_caracteristicas_emprendedor">Más Información <i class="fas fa-arrow-right"></i></button>
         </div>
         <div class="column_info">
-            <img src="http://localhost/asonaema/img/retos_emprendedor.svg" loading="lazy" class="column_info_imgtop" alt="">
-            <h2 class="column_info_title">Retos que debe superar un emprendedor</h2>
+        <img src="img/climatizacion.svg" class="column_info_imgtop" alt="">
+            <h2 class="column_info_title">Climatización</h2>
             <p class="column_info_text">
                 Conseguir la libertad financiera con una idea de negocio es un asunto que pone de cabeza a más de un emprendedor; 
                 hay muchas vertientes a las que hay que prestar atención para conseguir el éxito.
             </p>
             <button class="column_info_button" id="btn_mas_info_retos_emprededor" data-popup="mas_info_retos_emprendedor">Más Información <i class="fas fa-arrow-right"></i></button>
         </div>
+        <div class="column_info">
+        <img src="img/arquitectura.svg" class="column_info_imgtop" alt="">
+            <h2 class="column_info_title">Electricidad</h2>
+            <p class="column_info_text">
+                Conseguir la libertad financiera con una idea de negocio es un asunto que pone de cabeza a más de un emprendedor; 
+                hay muchas vertientes a las que hay que prestar atención para conseguir el éxito.
+            </p>
+            <button class="column_info_button" id="btn_mas_info_retos_emprededor" data-popup="mas_info_retos_emprendedor">Más Información <i class="fas fa-arrow-right"></i></button>
+        </div>
+        
     </div>
     
     

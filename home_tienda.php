@@ -110,17 +110,17 @@
         <div class="categoria">
             <a href="tienda/categoria/capilares">
                 <div class="categoria_item capilares">
-                    <h2>Capilares</h2>
+                    <h2>Iluminación</h2>
                 </div>
             </a>
             <a href="tienda/categoria/piel">
                 <div class="categoria_item piel">
-                    <h2>Cuidado de la piel</h2>
+                    <h2>Variadores de corriente</h2>
                 </div>
             </a>
             <a href="tienda/categoria/bisuteria">
                 <div class="categoria_item bisuteria">
-                    <h2>Bisuteria</h2>
+                    <h2>Interructores</h2>
                 </div>
             </a>
         </div>

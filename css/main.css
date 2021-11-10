@@ -21,7 +21,7 @@ body a{
     background-color: #F5F5F5;
 }
 ::-webkit-scrollbar-thumb{
-    background-color: #08723b; 
+    background-color: #8f1f1f; 
     background-image: -webkit-linear-gradient(90deg,rgba(255, 255, 255, .2) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, .2) 50%,rgba(255, 255, 255, .2) 75%,transparent 75%,transparent)
 }
 .header-father{
@@ -69,7 +69,7 @@ body a{
     position: relative;
 }
 .header1 .menu_social > i:hover{
-    color: #0c8044;
+    color: #a40d0d;
     transition: all .3s ease;
     transition-delay: .3s;
     
@@ -117,7 +117,7 @@ body a{
     margin: 30px;
 }
 .header1 .menu_social .social a:hover i{
-    color: #08964d;
+    color: #a40d0d;
 }
 .header1 .menu_social .social i{
     margin: 0px 7px;
@@ -165,7 +165,7 @@ body a{
 }
 .banner.sobre_nosotros .inf_clip{
     clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
-    background: #0c8044;
+    background: #a40d0d;
     opacity: .8;
     width: 65%;
     height: 100%;
@@ -220,11 +220,11 @@ body a{
     width: 20px;
 }
 .menu li a:hover{
-    color: #00ac53;
+    color: #a40d0d;
 }
 .menu li a.active{
     font-weight: bold;
-    color: #00ac53;
+    color: #a40d0d;
 }
 .btn-main,
 .column_info_button{
@@ -255,9 +255,9 @@ body a{
 }
 .btn-main:hover,
 .column_info_button{
-    background: #0c8044;
+    background: #a40d0d;
     color: #ffffff;
-    border: .5px solid #0c8044;
+    border: .5px solid #a40d0d;
     box-shadow: 1px 3px 5px rgba(0,0,0,.35);
 }
 
@@ -431,7 +431,7 @@ body a{
     transition: all .3s ease;
 }
 .pie_pagina .cuerpo > div:nth-child(2) ul li a:hover{
-    color: #0c8044;
+    color: #a40d0d;
 }
 .pie_pagina .cuerpo .newsletter{
     padding: 20px 0px;
@@ -475,8 +475,8 @@ body a{
     padding: 10px;
     font-size: 20px;
     color: #eeeeee;
-    background: #0c8044;
-    border: 1px solid #0c8044;
+    background: #a40d0d;
+    border: 1px solid #a40d0d;
     padding: 20px 30px;
     box-shadow: 1px 3px 5px rgba(0,0,0,.08);
     margin-top: 20px;
@@ -535,7 +535,7 @@ body a{
     display: none;
 }
 .blanco .cargando{
-    color: #0c8044;
+    color: #a40d0d;
 }
 .menu_scroll{
     position: fixed;
@@ -568,7 +568,7 @@ body a{
     box-shadow: 1px 2px 4px rgba(0,0,0,.5);
     outline: none;
     cursor: pointer;
-    background: #0c8044;
+    background: #a40d0d;
     color: #fff;
     transform: translateX(60px);
     transition: all .4s ease;
@@ -699,7 +699,7 @@ body a{
     position: absolute;
     left: 8px;
     width: 16px;
-    background: #0c8044;
+    background: #a40d0d;
     animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
   }
   .lds-facebook div:nth-child(1) {
@@ -822,7 +822,6 @@ body a{
     position: relative;
     background: none;
 
-
 }
 
 /* ---- particles.js container ---- */ 
@@ -841,9 +840,9 @@ body a{
     justify-content: center;
 }
 .column_info{
-    width: 33.3%;
-    padding: 30px;
-    margin: 20px;
+    width: 25%;
+    padding: 15px;
+    margin: 5px;
     background: #fff;
     box-shadow: 1px 1px 10px rgba(0,0,0,.1);
     opacity: 0;
@@ -858,6 +857,10 @@ body a{
     animation: animation_column_info_2 1s ease-out 1.3s forwards;
 }
 .column_info_container.active > .column_info:nth-child(4),
+#sub_container_valor_mision_vision > .vision{
+    animation: animation_column_info_3 1s ease-out .8s forwards;
+}
+.column_info_container.active > .column_info:nth-child(5),
 #sub_container_valor_mision_vision > .vision{
     animation: animation_column_info_3 1s ease-out .8s forwards;
 }
@@ -892,28 +895,41 @@ body a{
     }
 }
   .column_info_imgtop{
-      width: 80px;
+      width: 130px;
       display: block;
       margin: 10px auto;
       margin-bottom: 30px;
   } 
   .column_info_title{
       margin-bottom: 30px;
+      font-size: 1.5em;
       font-family: 'Noto Sans JP', sans-serif;
       font-weight: 300;
+      text-align: center;
+      text-transform: uppercase;
       color: #1C1C1C;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
   }
   .column_info_text{
       font-size: 20px;
       line-height: 30px;
-      font-weight: 100;
-      color: black;
+      font-weight: 333;
+      color: #444;
       margin-bottom: 30px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
   }
   .column_info_button{
-    padding: 10px 20px;
+    padding: 8px 15px;
     font-weight: 100;
-    height: 48px;
+    border-radius: 2px;
+    font-size: .8em;
+    height: 42px;
     outline: none;
 
   }
@@ -1066,7 +1082,7 @@ body a{
       padding: 14px 20px;
       border-radius: 3px;
       border: none;
-      background: #0c8044;
+      background: #a40d0d;
       color: #fff;
       box-shadow: 1px 3px 5px rgba(0,0,0,.35);
       animation: all ease .4s;
@@ -1179,7 +1195,7 @@ body a{
     background: #999999;
 }
 .carousel__indicadores .glider-dot.active{
-    background: #0c8044;
+    background: #a40d0d;
 
 }
 
@@ -1719,7 +1735,8 @@ body a{
 }
 .caption_child2 > img{
     position: absolute;
-    width: 100%;
+    /* width: 100%; */
+    height: 100%;
 }
 .carousel_control_next_tienda,
 .carousel_control_prev_tienda{
@@ -1768,7 +1785,7 @@ body a{
     opacity: .8;
 }
 .carousel-indicators li.active{
-    background: #0c8044
+    background: #a40d0d
 }
 
 /* -----------------page tienda styles-------------------- */
@@ -1835,13 +1852,13 @@ body a{
     text-align: center;
 }
 .capilares{
-    background-image: url('../img/img_capilar.jpg');
+    background-image: url('../img/categoria1.jpg');
 }
 .piel{
-    background-image: url('../img/img_piel.jpg');
+    background-image: url('../img/categoria2.jpg');
 }
 .bisuteria{
-    background-image: url('../img/img_bisuteria.jpg');
+    background-image: url('../img/categoria3.jpg');
 }
 
 /* -----------------page tienda carousel-------------------- */
@@ -1884,7 +1901,7 @@ body a{
     background: #999999;
 }
 .carousel_tienda_home_indicadores .glider-dot.active{
-    background: #0c8044;
+    background: #a40d0d;
 }
 .carousel_tienda_home_anterior{
     left: -20px;
@@ -1899,22 +1916,29 @@ body a{
     background: #fff;
     box-shadow: 1px 3px 4px rgba(0,0,0, 0.3);
     border-radius: 4px;
-    overflow: hidden;
-    height: 440px;
+    /* overflow: hidden; */
+    height: auto;
+    padding-bottom: 40px;
     position: relative;
 }
 .carousel_vend_recomendados{
-    height: 380px;
+    height: auto;
 }
 .header_img_card{
-    height: 43%;
+    /* height: 43%; */
+    height: 100%;
+    width: 100%;
     overflow: hidden;
+    /* border: 2px solid red ; */
 }
 .header_img_card img{
     transition: all ease .3s;
+    width: 100%;
+    transform: scale(.9);
+    /* border: 2px solid blue; */
 }
 .carousel_tienda_home_elemento:hover .header_img_card img{
-    transform: scale(1.1);
+    transform: scale(1);
 }
 .carousel_tienda_home_elemento:hover .elemento_tienda_home_title{
     color: #08964d;
@@ -1926,10 +1950,10 @@ body a{
     color: #697477;
     font-weight: normal;;
     font-size: 1.2em;
-    margin: 15px 0px;
+    margin: 2px 0px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     overflow: hidden;
 }
 .elemento_tienda_home_text{
@@ -1938,7 +1962,7 @@ body a{
     font-family: 'Noto Sans JP', sans-serif;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 1;
     overflow: hidden;
 }
 .container_vendedor_y_precio{
@@ -2042,7 +2066,7 @@ body a{
 .title_404{
     text-align: center;
     font-weight: 900;
-    color: #0c8044;
+    color: #a40d0d;
     margin: 30px;
     font-size: 3em;
 }
@@ -2057,7 +2081,7 @@ body a{
     margin: auto;
     width: 150px;
     height: 50px;
-    background: #0c8044;
+    background: #a40d0d;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2180,7 +2204,6 @@ body a{
 
 .container_carousel_producto_recomendado_producto{
     width: 65%;
-    /* border: 1px solid red; */
     background: #ffffff;
     border: .3px solid #e7ebed;
     margin: 0px;
